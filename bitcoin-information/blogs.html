@@ -71,7 +71,6 @@
             <li><a href="https://blog.dlsouza.lol/" title="Davidson Souza" target="_blank" rel="noopener">Davidson Souza</a></li>
             <li><a href="https://medium.com/@elombrozo" title="Eric Lombrozo" target="_blank" rel="noopener">Eric Lombrozo</a></li>
             <li><a href="https://freedom-to-tinker.com/tag/bitcoin/" title="Freedom to Tinker" target="_blank" rel="noopener">Freedom to Tinker</a></li>
-            <li><a href="http://gavinandresen.ninja/" title="Gavin Andresen" target="_blank" rel="noopener">Gavin Andresen</a></li>
             <li><a href="https://www.erisian.com.au/wordpress/" title="Inamerrata" target="_blank" rel="noopener">Inamerrata</a> (Anthony Towns)</li>
             <li><a href="https://ishaana.com/blog/" title="Ishaana Misra" target="_blank" rel="noopener">Ishaana Misra</a></li>
             <li><a href="https://rubin.io/blog/" title="Jeremy Rubin" target="_blank" rel="noopener">Jeremy Rubin</a></li>
@@ -87,7 +86,6 @@
             <li><a href="https://sprovoost.nl/" title="Sjors Provoost" target="_blank" rel="noopener">Sjors Provoost</a></li>
             <li><a href="https://squareselfcustody.substack.com/" title="Square" target="_blank" rel="noopener">Square Self Custody</a></li>
             <li><a href="https://cryptocustody.substack.com/" title="Custody" target="_blank" rel="noopener">This Week in Custody</a> (Philip Glazman)</li>
-            <li><a href="http://www.truthcoin.info/archive/" title="Paul Sztorc" target="_blank" rel="noopener">Truthcoin</a> (Paul Sztorc)</li>
             <li><a href="https://reyify.com/blog" title="waxwing" target="_blank" rel="noopener">waxwing</a></li>
             <li><a href="https://laanwj.github.io/" title="Wladimir van der Laan" target="_blank" rel="noopener">Wladimir van der Laan</a></li>
           </ul>
@@ -105,7 +103,6 @@
             <li><a href="https://medium.com/@BrandonQuittem" title="Brandon Quittem" target="_blank" rel="noopener">Brandon Quittem</a></li>
             <li><a href="https://medium.com/@cburniske" title="Christ Burniske" target="_blank" rel="noopener">Chris Burniske</a></li>
             <li><a href="https://thecontrol.co/" title="Nick Tomaino" target="_blank" rel="noopener">The Control</a> (Nick Tomaino)</li>
-            <li><a href="https://www.danheld.com/" title="Dan Held" target="_blank" rel="noopener">Dan Held</a></li>
             <li><a href="https://elaineou.com/" title="Elaine Ou" target="_blank" rel="noopener">Elaine Ou</a></li>
             <li><a href="https://ercwl.medium.com/" title="Eric Wall" target="_blank" rel="noopener">Eric Wall</a></li>
             <li><a href="http://avc.com/?s=bitcoin" title="Fred Wilson" target="_blank" rel="noopener">Fred Wilson</a></li>
@@ -115,7 +112,6 @@
             <li><a href="https://jpkoning.blogspot.ca/search/label/bitcoin" title="JP Koning" target="_blank" rel="noopener">JP Koning</a></li>
             <li><a href="http://nakamotoinstitute.org/mempool/" title="Satoshi Nakamoto Institute" target="_blank" rel="noopener">The Memory Pool</a> (Satoshi Nakamoto Institute)</li>
             <li><a href="https://nakamoto.com/" title="Nakamoto" target="_blank" rel="noopener">Nakamoto</a></li>
-            <li><a href="https://niccarter.info/" title="Nic Carter" target="_blank" rel="noopener">Nic Carter</a></li>
             <li><a href="https://www.resistance.money/" title="Resistance Money" target="_blank" rel="noopener">Resistance Money</a></li>
             <li><a href="https://gendal.me/tag/bitcoin/" title="Richard Gendal Brown" target="_blank" rel="noopener">Richard Gendal Brown</a></li>
             <li><a href="https://medium.com/@thepiratewhocantbenamed" title="Shinobi" target="_blank" rel="noopener">Shinobi</a></li>
@@ -133,15 +129,11 @@
     </div>
   </section>
   
-  <footer class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p class="footer">No copyright ever. No rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../js/combined.js"></script>
+  <div id="footer">
+    {{loadtemplate footer.html at footer}}
+  </div>
+
+  <script type="text/javascript" src="/js/regex_template_engine.js"></script>
+  <script type="text/javascript" src="/js/jquery.js"></script>
 </body>
 </html>
