@@ -1,0 +1,388 @@
+@charset "UTF-8";
+body { 
+	text-align: left;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+h1 {
+	font-weight: 600;
+	text-transform: uppercase;
+	border-bottom: solid 4px;
+}
+.footer {
+	font-size: 10px;
+}
+.jumbotron {
+	width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+	background-image: url("images/bkg-2.webp");
+  background-size: 100% 100%;
+}
+.jumbotron a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+.jumbotron a:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}
+.jumbotron a:active {
+	color: #CC4C00;
+	text-decoration: none;
+}
+.jumbotron a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+.inner-background {
+	width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+	background-image: url("images/bkg-2.webp");
+  background-size: 100% 100%;
+}
+.well {
+	font-size: 11px;
+}
+.btn {
+	background-color: #CC4C00;
+	border: #CC4C00;
+}
+.btn:hover {
+	background-color: #808080;
+	border: #808080;
+}
+.row {
+  color: #ffffff;
+}
+.navbar {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.navbar-brand {
+  padding-left: 0px;
+}
+.navbar-brand a:hover {
+  color: #CC4C00;
+}
+.navbar-brand a:visited:hover {
+  color: #ffffff;
+}
+.navbar {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0px;
+}
+.navbar a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #CC4C00;
+  text-decoration: none;
+}
+.navbar a:active {
+  color: #000000;
+  text-decoration: none;
+}
+.navbar a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar a:visited:hover {
+  color: #CC4C00;
+  text-decoration: none;
+}
+.navbar li a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  color: #CC4C00;
+  text-decoration: none;
+}
+.navbar li a:active {
+  color: #000000;
+  text-decoration: none;
+}
+.navbar li a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.section {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0px;
+}
+/* Increase line spacing on mobile to improve tap target UX */
+li a {
+  line-height:2.5;
+}
+@media (min-width: 60em) {
+  li a {
+    line-height:2.5;
+  }
+}
+a:link {
+	color: #CC4C00;
+	text-decoration: none;
+}
+a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	color: #ff0000;
+	text-decoration: none;
+}
+.date {
+	font-size: 10px;
+	color: #626262;
+	letter-spacing: 1px;
+	line-height: 30px;
+}
+.videowrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: #000000; /* Otherwise white text on white background is illegible */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #CC4C00;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #808080;
+}
+
+/* gray out disabled buttons */
+input[type=submit]:disabled {
+    background-color: #808080;
+}
+
+.error {
+	color: #FF0000;
+}
+iframe {
+  border: none;
+}
+@media (min-width: 768px) {
+  .media {
+    height: 350px;
+  }
+}
+@media (min-width: 992px) {
+  .media {
+    height: 275px;
+  }
+}
+@media (min-width: 1200px) {
+  .media {
+    height: 225px;
+  }
+}
+@media (min-width: 768px) {
+  .vid {
+	text-align: center;
+    height: 325px;
+  }
+}
+@media (min-width: 992px) {
+  .vid {
+	text-align: center;
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .vid {
+	text-align: center;
+    height: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .audio {
+	text-align: center;
+    height: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .audio {
+	text-align: center;
+	height: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .audio {
+	text-align: center;
+    height: 150px;
+  }
+}
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("images/playvideo.png") no-repeat;
+    cursor: pointer;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?qv41pc');
+  src:  url('/fonts/icomoon.eot?qv41pc#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.woff?qv41pc') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 20px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-keybase:before {
+  content: "\e900";
+}
+.icon-mastodon:before {
+  content: "\e901";
+}
+.icon-nostr:before {
+  content: "\e903";
+}
+.icon-x:before {
+  content: "\e902";
+}
+.icon-email:before {
+  content: "\f003";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-telegram:before {
+  content: "\f1d8";
+}
+.icon-pgp:before {
+  content: "\f23e";
+}
+.icon-reddit:before {
+  content: "\f281";
+}
+.icon-bitcoin:before {
+  content: "\f15a";
+}
+.icon-sun:before {
+  content: "\f185";
+}
+.icon-moon:before {
+  content: "\f186";
+}
+
+/*　Dark / light toggle switch　*/
+input[type=checkbox] {display: none;}
+input[type=checkbox] + label {padding:8px 0 0 4px;display: inline-block;font-size: 22px;}
+input[type=checkbox] + label:before {content: "\f185";display: inline-block;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;font-family: icomoon;}
+input[type=checkbox]:checked + label:before {content: "\f185";display: inline-block;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;font-family: icomoon;}
+input[type=checkbox] + label:hover {
+  color: #CC4C00;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dark-container {
+    background-color: #333333;
+    color: #ffffff !important;
+}
+/* Google Custom Search Widget */
+#___gcse_0 { margin-top:-20px; }
