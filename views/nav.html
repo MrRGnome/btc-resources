@@ -25,7 +25,6 @@
 		try{
 			var newMode=localStorage.getItem('mode')=="dark"?"":"dark";
       localStorage.setItem("mode",newMode);
-      console.log("set newmode = " + newMode);
 		}catch(ex){
 			var newMode=document.cookie.split(";")[0].split("=")[1]=="dark"?"":"dark";var date=new Date();
 			date.setTime(date.getTime()+(365*24*60*60*1000));
@@ -55,4 +54,10 @@
 		toggle.addEventListener('change',function(){toggleDarkLight()});
 	}
 	applyDarkLightMode();
+
+  var menuExpand = document.getElementsByClassName("navbar-toggle")[0];
+  menuExpand.addEventListener("click",function () {
+    $(menuExpand).toggleClass("collapsed");
+    $(document.getElementsByClassName("navbar-collapse")[0]).toggleClass("show");
+  });
 </script>
