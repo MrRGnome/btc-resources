@@ -40,7 +40,7 @@
 			currentClass=document.cookie.split(";")[0].split("=")[1];
 		}
 		var currentRef = document.getElementById("mystyle").getAttribute("href");
-		if(currentRef.search("style.css") != -1)
+		if(currentClass == "dark")
 			document.getElementById("mystyle").setAttribute("href", currentRef.replace("style.css", "dark.css"));
 		else
 			document.getElementById("mystyle").setAttribute("href", currentRef.replace("dark.css", "style.css"));
