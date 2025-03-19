@@ -2,7 +2,7 @@
 TemplateEngine.settings = {};
 
 //Set this to wherever your html templates are that will be loaded relative to your root directory, include a leading slash and no trailing slash. Leave empty if loading from root directory.
-TemplateEngine.settings.VIEWS_FOLDER = "views";
+TemplateEngine.settings.VIEWS_FOLDER = "/views";
 
 //Optional subdirectory from which root of site is running
 TemplateEngine.settings.SUBDIRECTORY = "/btc-resources";
