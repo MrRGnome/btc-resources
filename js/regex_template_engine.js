@@ -2,7 +2,11 @@
 TemplateEngine.settings = {};
 
 //Set this to wherever your html templates are that will be loaded relative to your root directory, include a leading slash and no trailing slash. Leave empty if loading from root directory.
-TemplateEngine.settings.VIEWS_FOLDER = "../views";
+TemplateEngine.settings.VIEWS_FOLDER = "/views";
+
+//The full URL representing the hosted root directory - required to prevent queries to other sites in production or explicitly define a URL path
+//TemplateEngine.settings.DOMAIN = "https://mrrgnome.github.io/btc-resources";
+//TemplateEngine.settings.DOMAIN = "http://127.0.0.1:5500";
 
 //Set this to a css class name which includes the property "display: hidden;"
 TemplateEngine.settings.HIDDEN_CLASS = "hidden";
@@ -11,13 +15,13 @@ TemplateEngine.settings.HIDDEN_CLASS = "hidden";
 TemplateEngine.settings.AUTOLOAD = true;
 
 //Should document be hidden until some future parsed point?
-TemplateEngine.settings.HIDE_TEMPLATE = false;
+TemplateEngine.settings.HIDE_TEMPLATE = true;
 
 //Enable one-way binding where changes to the javascript variable are reflected to the HTML template (Alpha feature, may experience bugs. Disabled by default)
 TemplateEngine.settings.BINDING = false;
 
 //Enable debug output to js console (WARNGING - TRUE MAY CAUSE PERFOMANCE SLOW DOWN FOR LARGE LOADS)
-TemplateEngine.settings.DEBUG = true;
+TemplateEngine.settings.DEBUG = false;
 
 //Enable ANTI_XHR_CACHING to store retrieved templates in sessionStorage - increases performance on documents with multiple requests to the same template
 TemplateEngine.settings.ANTI_XHR_CACHING = false;
@@ -134,6 +138,10 @@ TemplateEngine.LoadTemplate = function (filename, callback, divId) {
         TemplateEngine.activeRequests[filename] = [];
     }
 
+    var domain = window.location.protocol + "//" + window.location.host;
+
+    if (TemplateEngine.settings.DOMAIN && domain == TemplateEngine.settings.DOMAIN.substring(0,domain.length -1))
+        fileDir = TemplateEngine.settings.DOMAIN + fileDir;
 
     var r = new XMLHttpRequest();
     r.open("GET", fileDir + filename, true);
