@@ -5,8 +5,7 @@ TemplateEngine.settings = {};
 TemplateEngine.settings.VIEWS_FOLDER = "/views";
 
 //The full URL representing the hosted root directory - required to prevent queries to other sites in production or explicitly define a URL path
-//TemplateEngine.settings.DOMAIN = "https://mrrgnome.github.io/btc-resources";
-//TemplateEngine.settings.DOMAIN = "http://127.0.0.1:5500";
+TemplateEngine.settings.DOMAIN = "https://mrrgnome.github.io/btc-resources";
 
 //Set this to a css class name which includes the property "display: hidden;"
 TemplateEngine.settings.HIDDEN_CLASS = "hidden";
@@ -139,8 +138,8 @@ TemplateEngine.LoadTemplate = function (filename, callback, divId) {
     }
 
     var domain = window.location.protocol + "//" + window.location.host;
-
-    if (TemplateEngine.settings.DOMAIN && domain == TemplateEngine.settings.DOMAIN.substring(0,domain.length -1))
+    console.log(domain + " == " + TemplateEngine.settings.DOMAIN.substring(0,domain.length));
+    if (TemplateEngine.settings.DOMAIN && domain == TemplateEngine.settings.DOMAIN.substring(0,domain.length))
         fileDir = TemplateEngine.settings.DOMAIN + fileDir;
 
     var r = new XMLHttpRequest();
