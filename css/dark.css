@@ -303,15 +303,15 @@ iframe {
     margin-left: -36px;
     margin-top: -36px;
     position: absolute;
-    background: url("images/playvideo.png") no-repeat;
+    background: url("../images/playvideo.png") no-repeat;
     cursor: pointer;
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?qv41pc');
-  src:  url('/fonts/icomoon.eot?qv41pc#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.woff?qv41pc') format('woff');
+  src:  url('../fonts/icomoon.eot?qv41pc');
+  src:  url('../fonts/icomoon.eot?qv41pc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?qv41pc') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;

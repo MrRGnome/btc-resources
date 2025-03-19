@@ -4,6 +4,11 @@ TemplateEngine.settings = {};
 //Set this to wherever your html templates are that will be loaded relative to your root directory, include a leading slash and no trailing slash. Leave empty if loading from root directory.
 TemplateEngine.settings.VIEWS_FOLDER = "views";
 
+//Optional subdirectory from which root of site is running
+TemplateEngine.settings.SUBDIRECTORY = "/btc-resources";
+if(window.location.href.search(TemplateEngine.settings.SUBDIRECTORY) == -1)
+    TemplateEngine.settings.SUBDIRECTORY = "";
+
 //Set this to a css class name which includes the property "display: hidden;"
 TemplateEngine.settings.HIDDEN_CLASS = "hidden";
 
@@ -137,7 +142,7 @@ TemplateEngine.LoadTemplate = function (filename, callback, divId) {
     
 
     var r = new XMLHttpRequest();
-    r.open("GET", fileDir + filename, true);
+    r.open("GET", TemplateEngine.settings.SUBDIRECTORY + fileDir + filename, true);
     r.onreadystatechange = function () {
         if (r.readyState != 4 || r.status != 200)
             return;
