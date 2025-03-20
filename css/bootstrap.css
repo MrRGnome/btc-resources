@@ -32,6 +32,10 @@ audio:not([controls]) {
   display: none;
 }
 
+.footer-icons a {
+  padding-left: 1em;
+}
+
 a {
   background-color: transparent;
 }
