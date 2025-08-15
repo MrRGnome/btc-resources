@@ -1,137 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Bitcoin Books</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="bitcoin, info, information, books, economics">
-  <meta name="Robots" content="index,follow">
-  <meta name="description" content="Recommended books that focus on Bitcoin.">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bitcoin Books — Step 3 (All Sections)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Recommended books that focus on Bitcoin.">
-  <meta name="twitter:title" content="Recommended Bitcoin Books">
-  <meta name="twitter:image" content="../images/avatar.jpg">
+  :root{
+    --bg:#ffffff;
+    --text:#222426;
+    --muted:#6b7280;
+    --heading:#CC4C00;   /* orange */
+    --link:#CC4C00;      /* red */
+    --divider:#e9ecef;
+    --chip:#f8fafc;
+    --chip-border:#e5e7eb;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:1000px;margin:0 auto;padding:28px 18px 72px}
+  header h1{font-size:40px;margin:0 0 6px;letter-spacing:.3px}
+  header p{margin:0 0 20px;color:var(--muted)}
+  .section{padding-top:6px}
+  .section h2{color:var(--heading);font-size:26px;margin:0 0 8px}
+  .divider{height:1px;background:var(--divider);margin:10px 0 12px}
+  ul.books{list-style:none;padding:0;margin:0}
+  ul.books li{position:relative;padding:12px 12px 12px 22px;margin:10px 0;border-radius:12px;transition:background-color .15s ease, transform .12s ease, box-shadow .15s ease}
+  ul.books li::before{content:'•';position:absolute;left:6px;top:12px;color:var(--heading);line-height:1.2}
+  ul.books li:hover{background:#fafafa;transform:translateX(2px);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+  .title{font-weight:600}
+  a.title{color:var(--text);text-decoration:none;border-bottom:2px solid transparent}
+  a.title:hover{color:var(--link);border-bottom-color:var(--link)}
+  .meta{color:var(--muted);font-size:13px;margin-left:6px}
+  .desc{color:var(--muted);font-size:13px;margin-top:4px}
+  .chips{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+  .chip{background:var(--chip);border:1px solid var(--chip-border);padding:3px 8px;border-radius:999px;font-size:11px;color:#475569}
+  .actions{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{appearance:none;border:1px solid var(--chip-border);background:#fff;padding:8px 10px;border-radius:10px;font-weight:600;cursor:pointer}
+  .btn:hover{border-color:var(--heading)}
+  .details{display:none;margin-top:10px;border-top:1px dashed var(--divider);padding-top:10px}
+  .details-grid{display:grid;grid-template-columns: 140px 1fr;row-gap:8px;column-gap:12px}
+  .label{font-size:12px;color:var(--muted)}
+  .value{font-size:13px}
+  .links a{color:var(--link);text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  /* appear animation */
+  .appear{opacity:0;transform:translateY(8px);transition:opacity .35s ease, transform .35s ease}
+  .appear.show{opacity:1;transform:none}
 
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Recommended books that focus on Bitcoin.">
-  <meta property="og:image" content="../images/avatar.jpg">
-  <meta property="og:url" content="../bitcoin-information/books.html">
-  <meta property="og:title" content="Recommended Bitcoin Books">
+  /* Fix for additional links alignment */
+  .links{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+    vertical-align: top;
+  }
+  .links a{
+    color: var(--heading);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid var(--chip-border);
+    transition: all 0.15s ease;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: top;
+    height: 36px;
+    box-sizing: border-box;
+    min-width: 80px;
+    appearance: none;
+    user-select: none;
+  }
+  .links a:hover{
+    background: #fafafa;
+    border-color: var(--heading);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
 
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="apple-touch-icon" href="../images/favicon.png">
 
-
-  <style>
-  html{font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";-webkit-font-smoothing: subpixel-antialiased;-ms-text-size-adjust:100%}body{margin:0}footer,nav,section{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type=checkbox]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:helvetica neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}h1,h2{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,h2{margin-top:20px;margin-bottom:10px}h1{font-size:36px}h2{font-size:30px}p{margin:0 0 10px}.text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}ul{margin-top:0;margin-bottom:10px}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-right:-15px;margin-left:-15px}.col-sm-6,.col-md-6,.col-lg-6,.col-lg-8,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-6,.col-sm-10,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-10{width:83.33333333%}.col-sm-6{width:50%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-6,.col-md-10,.col-md-12{float:left}.col-md-12{width:100%}.col-md-10{width:83.33333333%}.col-md-6{width:50%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-6,.col-lg-8,.col-lg-10,.col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-10{width:83.33333333%}.col-lg-8{width:66.66666667%}.col-lg-6{width:50%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}input[type=checkbox]{margin:4px 0 0;margin-top:1px;line-height:normal}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent;padding-left:30px;padding-right:30px}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:30px;padding-left:30px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}}.container>.navbar-header,.container>.navbar-collapse{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-header,.container>.navbar-collapse{margin-right:0;margin-left:0}}.navbar-brand{float:left;height:50px;padding:15px;font-size:20px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:45px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-default{background-color:#fff;border-color:#fff;text-align:center}.navbar-default .navbar-brand{color:#000;font-weight:500}.navbar-default .navbar-nav>li>a{color:#000}.navbar-default .navbar-nav>.active>a{color:#CC4C00;background-color:rgba(0,0,0,.05);font-weight:700}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#fff}.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);box-shadow:inset 0 1px 1px rgba(0,0,0,.05)}.container:before,.container:after,.row:before,.row:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{display:table;content:" "}.container:after,.row:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after{clear:both}.navbar{font-weight:300;text-transform:uppercase}.navbar-brand{padding-left:0}#myDefaultNavbar1 a:link{font-weight:400}#myDefaultNavbar1 .active a:link{font-weight:700}h1{font-weight:600;text-transform:uppercase;border-bottom:solid 4px}.footer{font-size:10px}.inner-background{width:100%;height:auto;background-image:url(https://www.lopp.net/images/bkg-1.webp)}.well{font-size:11px}li a{line-height:1.8}@media (min-width:60em){li a{line-height:1.2}}a:link{color:#CC4C00;text-decoration:none;font-weight:700}a:visited{color:red;text-decoration:none}.wrapper{text-align:center}.toggle{position:relative;display:inline-block;width:120px;height:60px;margin-left:100px;padding:4px;border-radius:40px}.toggle:before,.toggle:after{content:'';display:table}.toggle:after{clear:both}.toggle-bg{position:absolute;top:-4px;left:-4px;width:100%;height:100%;background-color:#c0e6f6;border-radius:40px;border:4px solid #81c0d5}.toggle-input{position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid red;border-radius:40px;z-index:2;opacity:0}.toggle-switch{position:relative;width:40px;height:40px;margin-left:60px;background-color:#f5eb42;border:4px solid #e4c74d;border-radius:50%}.toggle-switch-figure{position:absolute;bottom:-14px;left:-50px;display:block;width:80px;height:40px;border:8px solid #d4d4d2;border-radius:20px;background-color:#fff;transform:scale(.6)}.toggle-switch-figure:after{content:'';display:block;position:relative;top:-45px;right:-32px;width:25px;height:15px;border:8px solid #d4d4d2;border-radius:100%;border-right-color:transparent;border-bottom-color:transparent;transform:rotateZ(50deg);background-color:#fff}.toggle-switch-figure:before{content:'';display:block;position:relative;top:-20px;right:-5px;width:35px;height:30px;border:8px solid #d4d4d2;border-radius:100%;border-right-color:transparent;border-bottom-color:transparent;transform:rotateZ(30deg);background-color:#fff}.toggle-switch-figureAlt{content:'';position:absolute;top:5px;left:2px;width:2px;height:2px;background-color:#efeeda;border-radius:100%;border:4px solid #dee1c5;box-shadow:42px -7px 0 -2px #fcfcfc,75px -10px 0 -2px #fcfcfc,54px 4px 0 -3px #fcfcfc,83px 7px 0 -1px #fcfcfc,63px 18px 0 -3px #fcfcfc,44px 28px 0 -1px #fcfcfc,78px 23px 0 -2px #fcfcfc;transform:scale(0)}.toggle-switch-figureAlt:before{content:'';position:absolute;top:-6px;left:18px;width:7px;height:7px;background-color:#efeeda;border-radius:100%;border:4px solid #dee1c5}.toggle-switch-figureAlt:after{content:'';position:absolute;top:19px;left:15px;width:2px;height:2px;background-color:#efeeda;border-radius:100%;border:4px solid #dee1c5}
-  </style>
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link id="mystyle" rel="stylesheet" href="../css/style.css">
-
+  /* top nav */
+  .topnav{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 22px}
+  .topnav a{text-decoration:none}
+  .anchor{scroll-margin-top:90px}
+</style>
 </head>
-
 <body>
-  <div id="nav">
-    {{loadtemplate nav.html at nav}}
-  </div>
-  <section id="main-background-section" class="inner-background">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 text-left col-lg-offset-1 col-lg-8 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-          <h1>Bitcoin Books</h1>
-          <p>These books go into great detail about various aspects of Bitcoin or ideas that are foundational to its value and operation.</p>
-          <br>
-        </div>
+  <div class="wrap">
+    <header>
+      <h1>BITCOIN BOOKS</h1>
+      <div class="topnav">
+        <a class="chip" href="#technical">Technical Deep‑Dives</a><a class="chip" href="#history">History & Context</a><a class="chip" href="#philosophy">Philosophy / Ideology / Culture</a><a class="chip" href="#fiat">Economic, Political & Fiat Critique</a><a class="chip" href="#niche">Niche / Specialized</a>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="row" style="font-weight:bold">
-        <div class="text-left col-xs-12 col-sm-6 col-lg-6 col-md-6">
-          <h2 id="technical"><a href="#technical">Technical Books:</a></h2>
-          <ul>
-            <li><a href="./technical-resources.html#books" title="Technical Books">List of all Technical Books</a></li>
-          </ul>
-          <h2 id="nontechnical"><a href="#nontechnical">Non-technical Books:</a></h2>
-          <ul>
-            <li><a href="https://www.amazon.ca/Mandibles-Family-2029-2047-Lionel-Shriver-ebook" title="Mandibles" target="_blank" rel="noopener">Mandibles</a> - A fiction story about hyperinflation in America</li>
-            <li><a href="https://dergigi.com/bitcoin/lessons/" title="21 Lessons" target="_blank" rel="noopener">21 Lessons</a> - on philosophy, economics, &amp; technology</li>
-            <li><a href="https://www.amazon.com/Genesis-Book-Projects-Inspired-Bitcoin/" title="The Genesis Book" target="_blank" rel="noopener">The Genesis Book</a> - a fairly good history of the technical innovations and events that led to the creation of Bitcoin.</li>
-            <li><a href="https://stacker.news/items/644578/r/BITC0IN" title="Digital Gold" target="_blank" rel="noopener">Digital Gold</a> - An excellent summery of Bitcoin's early days from Satoshi to the collapse of MTGOX and The Silk Road</li>
-            <li><a href="https://www.amazon.ca/Blocksize-War-controls-Bitcoins-protocol/" title="The Blocksize Wars" target="_blank" rel="noopener">The Block Size Wars</a> - Great history on what's happened politically within Bitcoin during the scaling debate</li>
-            <li><a href="https://www.amazon.com/Confessions-Economic-Hit-John-Perkins" title="Confessions of an Economic Hitman" target="_blank" rel="noopener">Confessions of an Economic Hitman</a> - explains the IMF-dollar-hegemony protection racket, relevant to recent events surrounding El Salvador ditching Bitcoin Legal Tender status for an IMF loan.</li>
-            <li><a href="https://bitcoindevphilosophy.com/r" title="Bitcoin Development Philosophy" target="_blank" rel="noopener">Bitcoin Development Philosophy</a> - A very approachable read that introduces many of the major technical areas of interest in Bitcoin development. It's free online.</li>
-            <li><a href="https://dergigi.com/bitcoin/lessons/" title="Grokking Bitcoin" target="_blank" rel="noopener">Grokking Bitcoin</a> - This is a great book on Bitcoin technically, how it works on a programming logic level.</li>
-            <li><a href="https://www.amazon.ca/Book-Satoshi-Collected-Writings-Nakamoto/" title="The Book of Satoshi" target="_blank" rel="noopener">The Book of Satoshi</a> - Most everything Satoshi Nakamoto ever wrote, publicly.</li>
-            <li><a href="https://www.amazon.ca/Mastering-Bitcoin-Programming-Open-Blockchain" title="Mastering Bitcoin" target="_blank" rel="noopener">Mastering Bitcoin</a> - Much the same as Grooking Bitcoin</li>
-            <li><a href="https://www.btcwip.com/" title="Bitcoin A Work in Progress" target="_blank" rel="noopener">Bitcoin A Work in Progress</a> - decent summery of the technical challenges and potential weaknesses surrounding Bitcoin</li>
-            <li><a href="https://stacker.news/items/202386/r/BITC0IN" title="Masteriing The Lightning Network" target="_blank" rel="noopener">Masteriing The Lightning Network</a> - the best if not the only good technical book on Bitcoin's Lighting Network</li>
-            <li><a href="https://stacker.news/items/328661r/BITC0IN" title="Bitcoin: A Game Theoretic Analysis" target="_blank" rel="noopener">Bitcoin: A Game Theoretic Analysis</a> - A very game theory math heavy graduate level textbook on all the potential technical weaknesses of what could go wrong with Bitcoin</li>
-            <li><a href="https://piratehash.com/product/bitcoin-alpha-v0-01/" title="BITCOIN v0.01 ALPHA" target="_blank" rel="noopener">BITCOIN v0.01 ALPHA</a> - A simple printed version of Bitcoin's v0.01 source code</li>
-            <li><a href="https://www.amazon.com/7th-Property-Bitcoin-Monetary-Revolution/dp/0578902621" title="The 7th Property" target="_blank" rel="noopener">The 7th Property</a></li>
-            <li><a href="https://www.amazon.com/Big-Print-Happened-America-Sound/dp/B0DVTCVX8J/" title="Big Print" target="_blank" rel="noopener">The Big Print</a></li>
-            <li><a href="https://www.amazon.com/dp/1736110578/" title="Bitcoin Age" target="_blank" rel="noopener">Bitcoin Age</a></li>
-            <li><a href="https://www.amazon.com/Bitcoin-Black-America-Isaiah-Jackson/dp/1079178090" title="Black America" target="_blank" rel="noopener">Bitcoin &amp; Black America</a></li>
-            <li><a href="https://www.amazon.com/gp/product/B07ZHY7RF8/" title="Bitcoin Clarity" target="_blank" rel="noopener">Bitcoin Clarity</a></li>
-            <li><a href="https://thebitcoineffect.com/" title="Bitcoin Effect" target="_blank" rel="noopener">The Bitcoin Effect</a></li>
-            <li><a href="https://www.amazon.com/dp/9916697981?ref_=cm_sw_r_cp_ud_dp_4Z6NWGW1SWE58F61F53H" title="Bitcoin Handbook" target="_blank" rel="noopener">The Bitcoin Handbook</a> (Economics, Tech, &amp; Psychology)</li>
-            <li><a href="https://www.amazon.com/Bitcoin-Money-Tale-Bitville-Discovering/dp/0578490676/" title="Bitcoin Money" target="_blank" rel="noopener">Bitcoin Money</a> (children's book)</li>
-            <li><a href="https://www.amazon.com/Bitcoin-Everything-divided-21-million/dp/9916697191/" title="Everything Divided by 21 Million" target="_blank" rel="noopener">Bitcoin: Everything Divided by 21 Million</a></li>
-            <li><a href="https://www.amazon.com/dp/B087638GJT" title="Independence Reimagined" target="_blank" rel="noopener">Bitcoin: Independence Reimagined</a></li>
-            <li><a href="https://www.amazon.com/dp/0990320251/" title="Bitcoin Shortcut" target="_blank" rel="noopener">The Bitcoin Shortcut</a></li>
-            <li><a href="https://www.amazon.com/gp/product/1090109911/" title="Sovereignty" target="_blank" rel="noopener">Bitcoin: Sovereignty Through Mathematics</a></li>
-            <li><a href="https://www.amazon.com/Bullish-Case-Bitcoin-Vijay-Boyapati-ebook/dp/B09CT4SX2X" title="The Bullish Case for Bitcoin" target="_blank" rel="noopener">The Bullish Case for Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Check-Your-Financial-Privilege-Gladstein/dp/B09V2NM9VJ" title="Check Your Financial Privilege" target="_blank" rel="noopener">Check Your Financial Privilege</a></li>
-            <li><a href="https://www.amazon.com/dp/1735060828/" title="Cryptoeconomics" target="_blank" rel="noopener">Cryptoeconomics: Fundamental Principles of Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Fiat-Ruins-Everything-Financial-Bitcoin/dp/B0CFDCGZBK" title="Fiat Ruins Everything" target="_blank" rel="noopener">Fiat Ruins Everything</a></li>
-            <li><a href="https://academy.saifedean.com/product/gradually-then-suddenly-hardcover/" title="Gradually, Then Suddenly" target="_blank" rel="noopener">Gradually, Then Suddenly</a></li>
-            <li><a href="https://www.amazon.com/dp/B0D326XRJJ" title="Intro to Bitcoin" target="_blank" rel="noopener">Intro to Bitcoin: Hope for a better world</a></li>
-            <li><a href="https://www.amazon.com/Inventing-Bitcoin-Technology-Decentralized-Explained-ebook/dp/B07MWXRWNB/" title="Inventing Bitcoin" target="_blank" rel="noopener">Inventing Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Layered-Money-Dollars-Bitcoin-Currencies/dp/1736110527" title="Layered Money" target="_blank" rel="noopener">Layered Money</a></li>
-            <li><a href="https://learnbitcoin.link" title="(L)earn Bitcoin" target="_blank" rel="noopener">(L)earn Bitcoin - Become Financially Sovryn</a> (for beginners)</li>
-            <li><a href="https://www.amazon.com/Thank-God-Bitcoin-Corruption-Redemption/dp/1641991216/" title="Thank God for Bitcoin" target="_blank" rel="noopener">Thank God for Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Little-Bitcoin-Book-Matters-Finances-ebook-dp-B07W957N7T/dp/B07W957N7T/" title="Little Bitcoin Book" target="_blank" rel="noopener">The Little Bitcoin Book</a> (for beginners)</li>
-            <li><a href="https://www.amazon.com/Little-Book-Bitcoin-Already-Figured/dp/1394286643" title="The Little Book of Bitcoin" target="_blank" rel="noopener">The Little Book of Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Age-Cryptocurrency-Bitcoin-Challenging-Economic-ebook/dp/B00L73JQ18/" title="Age of Cryptocurrency" target="_blank" rel="noopener">The Age of Cryptocurrency</a></li>
-            <li><a href="https://www.amazon.com/Bitcoin-Standard-Decentralized-Alternative-Central-ebook/dp/B07BPM3GZQ/" title="Bitcoin Standard" target="_blank" rel="noopener">The Bitcoin Standard</a></li>
-            <li><a href="https://www.amazon.com/gp/product/B077LD9YKB" title="Internet of Money" target="_blank" rel="noopener">The Internet of Money</a></li>
-            <li><a href="https://www.amazon.com/dp/B0CDYYNV4T" title="Orange Pilld" target="_blank" rel="noopener">Orange Pill'd</a></li>
-            <li><a href="https://www.amazon.com/dp/B0D7K7GGTV" title="Pay Attention" target="_blank" rel="noopener">Pay Attention to Bitcoin</a></li>
-            <li><a href="https://www.amazon.com/Philosophy-Bitcoin-%C3%81lvaro-D-Mar%C3%ADa/dp/B0C2SCKYFS/" title="Philosophy of Bitcoin" target="_blank" rel="noopener">The Philosophy of Bitcoin</a></li>
-            <li><a href="http://resistance.money/" title="Resistance Money" target="_blank" rel="noopener">Resistance Money</a>: A Philosophical Case for Bitcoin</li>
-            <li><a href="https://www.amazon.com/Truth-Decay-Bitcoin-Unveiling-Financial/dp/1916337708" title="Truth Decay" target="_blank" rel="noopener">Truth Decay - How Bitcoin Fixes This</a></li>
-            <li><a href="https://www.amazon.com/about-Bitcoin-blockchain-concept-definition/dp/1697134785/" title="Q&amp;A about Bitcoin" target="_blank" rel="noopener">Q&amp;A about Bitcoin</a> (for beginners &amp; advanced users)</li>
-            <li><a href="https://www.amazon.com/Why-Buy-Bitcoin-Investing-Tomorrow/dp/1733219609/" title="Why Buy Bitcoin" target="_blank" rel="noopener">Why Buy Bitcoin?</a></li>
-          </ul>
-        </div>
-        <!-- RIGHT COLUMN -->
-        <div class="text-left col-xs-12 col-sm-6 col-lg-6 col-md-6">
-          <h2 id="history"><a href="#history">Bitcoin History:</a></h2>
-          <ul>
-            <li><a href="./history.html#books" title="History Books">List of all History Books</a></li>
-          </ul>
-          <h2 id="economics"><a href="#economics">Economics &amp; Money:</a></h2>
-          <ul>
-            <li><a href="./economics.html#books" title="Economics Books">List of all Economics Books</a></li>
-          </ul>
-          <h2 id="freedom"><a href="#freedom">Freedom:</a></h2>
-          <ul>
-            <li><a href="https://www.amazon.com/gp/product/1944869085/" title="Cypherpunks" target="_blank" rel="noopener">Cypherpunks: Freedom and Future of the Internet</a></li>
-            <li><a href="https://www.amazon.com/Sovereign-Individual-Mastering-Transition-Information/dp/0684832720/" title="Sovereign Individual" target="_blank" rel="noopener">The Sovereign Individual</a></li>
-            <li><a href="/pdf/books/The_Machinery_of_Freedom.pdf" title="The Machinery of Freedom">The Machinery of Freedom</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <div id="footer">
-    {{loadtemplate footer.html at footer}}
+    <section id="technical" class="section anchor">
+      <h2>TECHNICAL DEEP‑DIVES:</h2>
+      <div class="divider"></div>
+      <ul id="list-technical" class="books"></ul>
+    </section>
+
+    <section id="history" class="section anchor">
+      <h2>HISTORY &amp; CONTEXT:</h2>
+      <div class="divider"></div>
+      <ul id="list-history" class="books"></ul>
+    </section>
+
+    <section id="philosophy" class="section anchor">
+      <h2>PHILOSOPHY / IDEOLOGY / CULTURE:</h2>
+      <div class="divider"></div>
+      <ul id="list-philosophy" class="books"></ul>
+    </section>
+
+    <section id="fiat" class="section anchor">
+      <h2>ECONOMIC, POLITICAL &amp; FIAT CRITIQUE:</h2>
+      <div class="divider"></div>
+      <ul id="list-fiat" class="books"></ul>
+    </section>
+
+    <section id="niche" class="section anchor">
+      <h2>NICHE / SPECIALIZED:</h2>
+      <div class="divider"></div>
+      <ul id="list-niche" class="books"></ul>
+    </section>
+
   </div>
 
-  <script type="text/javascript" src="../js/regex_template_engine.js"></script>
-  <script type="text/javascript" src="../js/jquery.js"></script>
+<script>
+const BOOKS_TECH = [
+  {
+    title: "Mastering Bitcoin: Programming the Open Blockchain",
+    authors: "Andreas M. Antonopoulos; David A. Harding",
+    subjects: ["Bitcoin Programming","Blockchain Technology","Cryptocurrencies — Computer programs"],
+    year: "2023",
+    edition: "3rd",
+    formats: ["eBook","Paperback","Audiobook"],
+    isbn: "9781098150099",
+    publisher: "O'Reilly Media, Inc., Boston",
+    summary: "Guide through the complex world of Bitcoin with essential detail for developers, investors, and the curious. Revised and expanded third edition.",
+    audience: ["Software Developers and Programmers","Technical Entrepreneurs in Fintech or Blockchain"],
+    difficulty: "Intermediate to Advanced",
+    language: "English",
+    quotes: ["“At the end of the day, bitcoin is programmable money… the possibilities are truly endless.”"],
+    links: ["https://www.google.com/books/edition/Mastering_Bitcoin/3zfhEAAAQBAJ"]
+  },
+  {
+    title: "Grokking Bitcoin",
+    authors: "Kalle Rosenbaum",
+    subjects: ["Bitcoin","Cryptocurrencies","Electronic funds transfers","Electronic commerce"],
+    year: "2019",
+    edition: "1st",
+    formats: ["eBook"],
+    isbn: "9781617294648",
+    publisher: "Manning Publications Co., Shelter Island, NY",
+    summary: "Approachable, illustrated guide to Bitcoin’s technology—mining, wallets, nodes, accepting payments.",
+    audience: ["Business professionals or investors","Developers","Students and self‑learners"],
+    difficulty: "Beginner to Intermediate",
+    language: "English",
+    quotes: ["“Real magic revealed. Great book!” — Nicolai Suhaci"],
+    links: ["https://www.google.com/books/edition/Grokking_Bitcoin/VTgzEAAAQBAJ"]
+  },
+  {
+    title: "Bitcoin: A Game‑Theoretic Analysis",
+    authors: "Micah Warren",
+    subjects: ["Bitcoin","Game theory"],
+    year: "2023",
+    edition: "1st",
+    formats: ["eBook","Paperback"],
+    isbn: "978-3110772838",
+    publisher: "De Gruyter, Berlin; Boston",
+    summary: "Definitive guide to the game‑theoretic and probabilistic foundations of Bitcoin’s security model; covers attacks, incentives, and PoW economics.",
+    audience: ["Graduate Students & Researchers in Mathematics, Economics, or Computer Science"],
+    difficulty: "Advanced (Graduate‑Level)",
+    language: "English",
+    quotes: ["“Especially good for a more advanced audience well‑versed in game theory and Bitcoin’s technical intricacies.”"],
+    links: ["https://www.google.com/books/edition/Bitcoin_A_Game_Theoretic_Analysis/hL-oEAAAQBAJ"]
+  },
+  {
+    title: "Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments",
+    authors: "Andreas M. Antonopoulos & René Pickhardt",
+    subjects: ["Bitcoin","Blockchains (Databases)","Electronic funds transfers"],
+    year: "2022",
+    edition: "1st",
+    formats: ["eBook","Paperback"],
+    isbn: "9781492054863",
+    publisher: "O'Reilly, Sebastopol, CA",
+    summary: "Practical guide to the Lightning Network (LN): wallets, nodes, channels, routing, and upcoming developments; building apps on LN.",
+    audience: ["Software developers","Bitcoin protocol engineers","Security professionals","Researchers","Fintech entrepreneurs"],
+    difficulty: "Intermediate to Advanced",
+    language: "English",
+    quotes: ["“Very clearly presented, and at a useful level of detail … without drowning the reader in specifics.” — Alex"],
+    links: ["https://www.google.com/books/edition/Mastering_the_Lightning_Network/8jpQEAAAQBAJ"]
+  },
+  {
+    title: "The Bitcoin White Paper (Alternative Title: The White Paper / BITCOIN v0.01 ALPHA)",
+    authors: "Satoshi Nakamoto",
+    subjects: ["Bitcoin","Electronic funds transfers"],
+    year: "2024; 2019",
+    formats: ["Hardcover (Book)"],
+    isbn: "9781999675929",
+    publisher: "Ignota Books, London",
+    summary: "The original peer‑to‑peer electronic cash proposal that launched Bitcoin; reprints and source code printouts.",
+    audience: ["Cryptographers and Computer Scientists","Developers and Software Engineers","Economists and Monetary Theorists","Financial and Tech Enthusiasts"],
+    difficulty: "Intermediate to advanced technical readers",
+    language: "English",
+    quotes: ["“Bitcoin seems to be a very promising idea… basing security on computing power rather than the good faith of the parties.” — Hal Finney"],
+    links: [
+      "https://www.amazon.com/Bitcoin-White-Paper-Satoshi-Nakamoto/dp/B0DPY3JGJM/",
+      "https://search.worldcat.org/title/1090849934"
+    ]
+  },
+  {
+    title: "The 7th Property: Bitcoin and the Monetary Revolution",
+    authors: "Eric Yakes",
+    subjects: ["Banks and banking","Bitcoin & Cryptocurrencies","Business & Economics","Financial instruments","Monetary policy","Money — History"],
+    year: "2021",
+    formats: ["eBook","Audiobook","Hardcover"],
+    isbn: "9780578902623",
+    publisher: "Black Poodle Publishing, Greenwood Village, CO",
+    summary: "Explains why Bitcoin is the answer to flaws in legacy finance and how it works at a technical level, in precise and accessible language.",
+    audience: ["Bitcoin‑curious individuals","Readers seeking technical‑yet‑accessible approach","Learners in money & central banking"],
+    difficulty: "Intermediate to Advanced",
+    language: "English",
+    quotes: ["“Bitcoin is not a get‑rich‑quick scheme, it is a don't‑get‑poor‑slowly plan.” — Eric Yakes"],
+    links: ["https://www.google.com/books/edition/The_7th_Property/O2l3zgEACAAJ"]
+  },
+  {
+    title: "Cryptoeconomics: Fundamental Principles of Bitcoin",
+    authors: "Eric Voskuil",
+    subjects: ["Bitcoin","Cryptocurrencies","Cryptomonnaie","Digital currency"],
+    year: "2020",
+    formats: ["eBook","Paperback"],
+    isbn: "9781735060828",
+    publisher: "Eric Voskuil",
+    summary: "Foundational, multi‑disciplinary exploration of Bitcoin at the intersection of security engineering and Austrian economics.",
+    audience: ["Advanced Bitcoin users and developers","Security engineers and protocol designers","Austrian economists","Bitcoin minimalists"],
+    difficulty: "Advanced",
+    language: "English",
+    quotes: ["“Information‑dense and carefully considered; the cross‑section of topics feels close to exhaustive.” — Alex"],
+    links: ["https://www.google.com/books/edition/Cryptoeconomics/jM4zzgEACAAJ"]
+  }
+];
+
+const SECTIONS = [
+  { id: "technical", books: BOOKS_TECH },
+  { id: "history", books: [{'title': 'The Genesis Book: The Story of the People and Projects That Inspired Bitcoin', 'authors': 'Aaron von Wirdum', 'subjects': ['Bitcoin', 'Electronic commerce', 'Electronic funds transfers', 'Exchange'], 'year': '2024', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9798989132621', 'publisher': 'Bitcoin Magazine Books, Nashville, TN', 'summary': 'A narrative history of the cypherpunks, cryptographers, and heterodox economists whose experiments paved the way for Satoshi’s peer‑to‑peer electronic cash.', 'audience': ['General Readers Interested in History and Tech', 'Bitcoin Enthusiasts & Crypto Curious', 'Developers, Cryptographers & Cypherpunks', 'Austrian Economists & Monetary Theorists'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Why is Bitcoin so different from its predecessors? … The best Bitcoin book yet written.” — Paul Sztorc'], 'links': ['https://www.google.com/books/edition/The_Genesis_Book/yoZl0AEACAAJ']}, {'title': 'Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money', 'authors': 'Nathaniel Popper', 'subjects': ['Credit', 'Electronic commerce', 'Electronic funds transfers', 'Money'], 'year': '2016', 'edition': 'First Harper paperback edition', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9780062362506', 'publisher': 'Harper, New York', 'summary': 'A reported history following the early characters and conflicts that propelled Bitcoin from an experiment to a global phenomenon.', 'audience': ['Business & Finance Professionals', 'General Readers & Crypto‑Curious Individuals', 'Non‑Technical Tech Enthusiasts', 'History & Culture Fans'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Riveting… crucial reading for anyone who wants to understand the future.” — Walter Isaacson'], 'links': ['https://www.google.com/books/edition/Digital_Gold/rafFCwAAQBAJ']}, {'title': "The Blocksize War: The Battle for Control over Bitcoin's Protocol Rules", 'authors': 'Jonathan Bier', 'subjects': ['Bitcoin', 'Cryptocurrencies'], 'year': '2021', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9798721895609', 'publisher': '[publisher not identified], [place of publication not identified]', 'summary': 'Chronology and analysis of the 2015–2017 blocksize debate and what it revealed about governance and consensus in Bitcoin.', 'audience': ['Intermediate to Advanced Bitcoin Enthusiasts', 'Developers, Engineers & Technologists', 'Bitcoin Governance Observers', 'Investors & Industry Participants', 'Journalists and Historians of Crypto'], 'difficulty': 'Intermediate to Advanced', 'language': 'English', 'quotes': ['“The blocksize debate wasn’t just about technology; it was a battle for the soul of Bitcoin.” — Sean Mayer'], 'links': ['https://www.google.com/books/edition/The_Blocksize_War/6FdazgEACAAJ']}, {'title': 'The Book of Satoshi: The Collected Writings of Bitcoin Creator Satoshi Nakamoto', 'authors': 'Phil Champagne', 'subjects': ['Bitcoin', 'Cryptocurrencies'], 'year': '2014', 'edition': '1st', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9780996061322', 'publisher': 'Wren Investment Group, LLC, United States', 'summary': 'Emails, posts, and the whitepaper from Satoshi Nakamoto, presented chronologically with editorial notes.', 'audience': ['Readers with a Software or Technical Background', 'Bitcoin Enthusiasts & Historians', 'Economists & Investors Curious About Tech Context', 'Curious Novices with Persistence', 'Researchers & Academics'], 'difficulty': 'Intermediate', 'language': 'English', 'quotes': ['“Helps unravel the tale of the continuous development of Bitcoin technology.” — Bitcoin Magazine'], 'links': ['https://www.google.com/books/edition/The_Book_of_Satoshi/F2gQ0QEACAAJ']}, {'title': 'Bitcoin Age', 'authors': 'Nik Bhatia and Michael Bower', 'subjects': ['Bitcoin', 'Economics', 'Financial systems', 'Money history'], 'year': '2025', 'formats': ['eBook', 'Audiobook', 'Hardcover'], 'isbn': '9781736110591', 'publisher': 'BookBaby, Cork', 'summary': 'A modern monetary history arguing how Bitcoin fits into the evolution of money and today’s affordability crisis.', 'audience': ['General Readers & Crypto‑Curious Individuals', 'Seasoned Bitcoin Enthusiasts', 'Economics & Finance Professionals', 'Students & Educators'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“A gripping journey through the history of money.” — Igor Pejic'], 'links': ['https://www.amazon.com/Audible-Bitcoin-Age/dp/B0F6QMMS4N/']}, {'title': 'Bitcoin & Black America', 'authors': 'Isaiah Jackson', 'subjects': ['African American — Finance, Personal', 'Bitcoin', 'Blockchains — Databases', 'Cryptocurrencies', 'Economics'], 'year': '2019', 'formats': ['eBook', 'Paperback'], 'isbn': '9781079178098', 'publisher': 'Isaiah Jackson, United States', 'summary': 'A call for economic empowerment and financial inclusion through Bitcoin in Black communities.', 'audience': ['Black Americans seeking economic empowerment', 'Crypto‑curious novices & beginners', 'Community leaders & educators', 'Readers interested in social justice & financial inclusion'], 'difficulty': 'Beginner‑Friendly', 'language': 'English', 'quotes': ['“For the first time in history, we have a Plan B option to the current financial system… Bitcoin is a step in the right direction.” — CNBC appearance'], 'links': ['https://www.amazon.com/Bitcoin-Black-America-Isaiah-Jackson/dp/1079178090/']}, {'title': 'The Bitcoin Effect: How to Take Full Responsibility, Think Long‑Term, and Live Smarter and Happier', 'authors': 'Christopher Westra', 'subjects': ['Financial Minimalism & Responsibility', 'Self‑Improvement', 'Behavioral Psychology'], 'year': '2024', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9798326714428', 'publisher': 'Self‑published', 'summary': 'How engaging with Bitcoin can reshape mindset toward responsibility, time preference, and self‑custody.', 'audience': ['Bitcoin Enthusiasts Seeking Personal Growth', 'Self‑Help & Personal Development Readers', 'Life Hackers & Mindset Builders'], 'difficulty': 'Beginner‑Friendly to Intermediate', 'language': 'English', 'quotes': ['Applies Bitcoin’s core principles as a ‘mental operating system’ for personal growth.'], 'links': ['https://www.amazon.com/Bitcoin-Effect-Responsibility-Long-Term-Operating-ebook/dp/B0D46R4DQR/']}, {'title': 'The Bitcoin Standard: The Decentralized Alternative to Central Banking', 'authors': 'Saifedean Ammous', 'subjects': ['Bitcoin', 'Bitcoin — Government policy', 'Electronic commerce'], 'year': '2018', 'formats': ['eBook', 'Audiobook', 'Hardcover'], 'isbn': '9781119473862', 'publisher': 'Wiley, Hoboken, New Jersey', 'summary': 'A monetary history and argument for Bitcoin as sound money and its cultural, economic, and political implications.', 'audience': ['Economics and Finance Students & Professionals', 'Bitcoin Enthusiasts and Investors', 'Policy Makers and Financial Thinkers', 'Educated General Readers'], 'difficulty': 'Intermediate', 'language': 'English', 'quotes': ['“This book blew my mind… we bought $425m of bitcoin.” — Michael Saylor'], 'links': ['https://www.google.com/books/edition/The_Bitcoin_Standard/wf9QDwAAQBAJ']}, {'title': 'The Internet of Money', 'authors': 'Andreas M. Antonopoulos', 'subjects': ['Bitcoin', 'Blockchains (Databases)', 'Cryptography', 'Electronic commerce', 'Electronic funds transfers', 'Money'], 'year': '2016', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9781537000459', 'publisher': 'Merkle Bloom LLC', 'summary': 'A collection of talks that explore the ‘why’ of Bitcoin and its broader significance beyond finance.', 'audience': ['Crypto Enthusiasts & Informed Readers', 'Entrepreneurs & Fintech Professionals', 'Investors exploring crypto’s impact'], 'difficulty': 'Moderate', 'language': 'English', 'quotes': ['“If you want to understand why Bitcoin matters, read this.” — Jameson Lopp'], 'links': ['https://www.google.com/books/edition/The_Internet_of_Money/TM8zvgAACAAJ']}, {'title': 'Layered Money: From Gold and Dollars to Bitcoin and Central Bank Digital Currencies', 'authors': 'Nik Bhatia', 'subjects': ['Banks and banking — History', 'Bitcoin', 'Commerce — History', 'Cryptocurrencies', 'Finance — History', 'Money — History', 'Technological innovations — Economic aspects'], 'year': '2021', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9781736110515', 'publisher': '[Nik Bhatia], United States', 'summary': 'Explains monetary ‘layers’ historically and how Bitcoin and CBDCs fit into a reshaping of the international system.', 'audience': ['Curious Non‑Experts', 'Intermediate Readers in Finance & Crypto', 'Financial History Enthusiasts', 'Bitcoin & Digital Currency Advocates'], 'difficulty': 'Moderate', 'language': 'English', 'quotes': ['“Paradigm‑shifting, intuitive framework for money.” — Nasdaq / Bitcoin Magazine'], 'links': ['https://www.google.com/books/edition/Layered_Money/pP4nzgEACAAJ']}, {'title': 'The Big Print: What Happened to America and How Sound Money Will Fix It', 'authors': 'Lawrence Lepard', 'subjects': ['Bitcoin — United States', 'Currency question — United States', 'Decentralization in government — United States', 'Deflation (Finance)', 'Inflation (Finance)', 'Monetary policy — United States', 'United States — Economic conditions'], 'year': '2024 & 2025', 'edition': '1st', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9798992242539', 'publisher': '[Lawrence Lepard]', 'summary': 'A fiat‑system critique connecting macro history to personal finance with a strong pro‑Bitcoin stance.', 'audience': ['Financially Aware & Inflation‑Conscious Readers', 'Sound‑Money Advocates', 'Macro‑minded Investors', 'Bitcoin and Gold Believers'], 'difficulty': 'Moderate', 'language': 'English', 'quotes': ['“Unflinching look at fiat’s failings… clearly communicated,” — Goodreads review'], 'links': ['https://www.google.com.ph/books/edition/The_Big_Print/wAoq0QEACAAJ', 'https://www.amazon.com/Big-Print-Happened-America-Sound/dp/B0DVTCVX8J']}] },
+  { id: "philosophy", books: [{'title': '21 Lessons: What I’ve Learned from Falling Down the Bitcoin Rabbit Hole', 'authors': 'Gigi; Guy Swann', 'subjects': ['Bitcoin', 'Cryptocurrencies', 'Digital currency'], 'year': '2019', 'edition': '1st', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9781697526349', 'publisher': '[publisher not identified]', 'summary': 'Short, reflective lessons distilling early insights from exploring Bitcoin’s ideas and culture.', 'audience': ['Beginner‑to‑Early Bitcoin Enthusiasts', 'Curious Explorers of Bitcoin’s Big Ideas', 'Casual Learners'], 'difficulty': 'Easy to Moderate', 'language': 'English', 'quotes': ['“Very easy to read and understand.” — Audible review'], 'links': ['https://www.amazon.com/21-Lessons-Learned-Falling-Bitcoin/dp/B088C1JVKY']}, {'title': 'The Philosophy of Bitcoin', 'authors': 'Álvaro D. María; Gabriel Kurman', 'subjects': ['Bitcoin', 'Cryptocurrency', 'Libertarian Thought', 'Austrian Economics', 'Monetary Theory', 'Decentralization'], 'year': '2023', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9798989132607', 'publisher': 'BTC Media, LLC, Nashville, Tennessee', 'summary': 'A philosophical treatment of Bitcoin’s nature, political implications, and the institutions it challenges.', 'audience': ['Libertarians & Sovereignty Advocates', 'Bitcoin Enthusiasts & Maximalists', 'Philosophical Thinkers', 'Students of Political Philosophy or Economics'], 'difficulty': 'Moderate / Intermediate', 'language': 'English', 'quotes': ['“Accessible to beginners and stimulating for experts… welcomes newbies and OGs alike.” — Gabriel Kurman'], 'links': ['https://www.google.com/books/edition/_/-2NZ0AEACAAJ']}, {'title': 'Resistance Money: A Philosophical Case for Bitcoin', 'authors': 'Andrew M. Bailey; Bradley Rettler', 'subjects': ['Bitcoin', 'Philosophy'], 'year': '2024', 'edition': '1st', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9781003484721', 'publisher': 'Routledge, New York, NY', 'summary': 'Measured academic case evaluating Bitcoin’s policy, censorship‑resistance, privacy, inclusion, and energy use.', 'audience': ['Philosophers & Ethicists', 'Academics & Students', 'Bitcoin Enthusiasts & Thought Leaders', 'Policy Makers & Social Critics', 'Skeptics'], 'difficulty': 'Advanced', 'language': 'English', 'quotes': ['“Accessible to all… packed with insights.” — Alex Gladstein'], 'links': ['https://www.google.com/books/edition/Resistance_Money/4Kj_EAAAQBAJ']}, {'title': 'Orange Pill’d', 'authors': 'Bailey Jakob', 'subjects': ['Biography & Autobiography'], 'year': '2023', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9798988313700', 'publisher': 'Bailey Jakob', 'summary': 'An anthology of 250+ personal stories about how Bitcoin impacted lives around the world.', 'audience': ['Readers seeking the human side of Bitcoin', 'Fans of memoir anthologies', 'Newcomers & Enthusiasts'], 'difficulty': 'Low to Moderate', 'language': 'English', 'quotes': ['“Educates you on Bitcoin and why it makes sense.” — Reddit user'], 'links': ['https://www.google.com/books/edition/Orange_Pill_d/L_fvzwEACAAJ', 'https://www.amazon.com/Orange-Pilld-Bailey-Jakob/dp/B0CDYYNV4T/']}, {'title': 'Pay Attention to Bitcoin: The Rise of Digital Gold and Its Place in the Evolution of Money', 'authors': 'Joseph Voelbel', 'subjects': ['Business & Economics', 'Finance', 'Technology & Engineering', 'Investment'], 'year': '2024', 'edition': '1st', 'formats': ['eBook', 'Paperback'], 'isbn': '9798329188653', 'publisher': 'Independently published', 'summary': 'A concise, jargon‑lite primer designed for absolute newcomers, with emerging glossary terms explained.', 'audience': ['Bitcoin Newcomers & Curious Investors', 'Financial Enthusiasts & Self‑Educators', 'Skeptics or Cautious Observers'], 'difficulty': 'Easy to Moderate', 'language': 'English', 'quotes': ['“Insightful, poetic, and easy to read!” — Seb Bunney'], 'links': []}, {'title': 'Thank God for Bitcoin: The Creation, Corruption and Redemption of Money', 'authors': 'Jimmy Song; Robert Breedlove; et al.', 'subjects': ['Bitcoin', 'Christian ethics', 'Money — History', 'Poverty — Moral and ethical aspects', 'Wealth — Moral and ethical aspects'], 'year': '2020', 'formats': ['eBook', 'Paperback', 'Audiobook'], 'isbn': '9781641991216', 'publisher': 'Bitcoin and Bible Group, United States', 'summary': 'A critique of fiat money through a Biblical lens and an argument for Bitcoin as sound, moral money.', 'audience': ['Christians & Faith‑based Readers', 'Beginner to Intermediate Bitcoin Enthusiasts', 'Libertarians & Austrian Economics Followers', 'Skeptics of Fiat Money'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Bitcoin vs Fiat Money – A Bible‑based perspective.” — 5★ review'], 'links': ['https://www.google.com/books/edition/Thank_God_for_Bitcoin/wdsVzgEACAAJ']}, {'title': 'Why Buy Bitcoin?: Investing Today in the Money of Tomorrow', 'authors': 'Andy Edstrom', 'subjects': ['Bitcoin', 'History', 'Investments', 'Money & Money history'], 'year': '2019', 'edition': '1st', 'formats': ['eBook', 'Paperback', 'Audiobook'], 'isbn': '9781733219600', 'publisher': 'Countercycle Media, Los Angeles, California', 'summary': 'An investor’s framework for evaluating Bitcoin as an emerging monetary asset and network.', 'audience': ['Traditional Investors & Financial Professionals', 'High‑Net‑Worth Individuals', 'Finance‑curious Individuals', 'Skeptics from Wall Street', 'Retail Investors'], 'difficulty': 'Intermediate to Advanced', 'language': 'English', 'quotes': ['“The most usable money will be easily identifiable…” — Andy Edstrom'], 'links': ['https://www.amazon.com/Why-Buy-Bitcoin-Investing-Tomorrow/dp/B08XQXD3DN/', 'https://search.worldcat.org/title/1110004121']}, {'title': 'The Bullish Case for Bitcoin', 'authors': 'Vijay Boyapati', 'subjects': ['Bitcoin', 'Electronic commerce', 'Money'], 'year': '2021', 'formats': ['eBook', 'Paperback', 'Audiobook'], 'isbn': '9781737204114', 'publisher': '[Vijay Boyapati], United States', 'summary': 'A clear, concise articulation of the monetary theory of Bitcoin and why it could outcompete gold and fiat.', 'audience': ['Bitcoin Newcomers', 'Intermediate Readers', 'Longtime Enthusiasts', 'Value‑minded Investors'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Excellent and inspiring… through a comprehensive and historical lens.” — Jack Dorsey'], 'links': ['https://www.google.com/books/edition/The_Bullish_Case_for_Bitcoin/mFNuzgEACAAJ']}, {'title': 'Truth Decay: How Bitcoin Fixes This — Unveiling the Path to Financial Freedom', 'authors': 'Victoria Collette Jones', 'subjects': ['Economics', 'Finance', 'Business & Management', 'Technology’s Impact on Society'], 'year': '2020', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '1916337708', 'publisher': '[publisher not identified]', 'summary': 'A small‑business owner’s personal journey to Bitcoin, including accepting BTC in her dental practice.', 'audience': ['Bitcoin Newcomers & Curious Beginners', 'Women in Finance & Business', 'Financial Independence Advocates', 'Small‑business Owners'], 'difficulty': 'Beginner', 'language': 'English', 'quotes': ['“Interesting to learn how she discovered bitcoin as a dentist…” — Thomas Hunt'], 'links': ['https://www.google.com/books/edition/Truth_Decay_How_Bitcoin_Fixes_This/zClpzQEACAAJ']}] },
+  { id: "fiat", books: [{'title': 'Confessions of an Economic Hit Man', 'authors': 'John Perkins', 'subjects': ['Autobiographies', 'Globalization', 'Imperialism — 20th century', 'External debt', 'Multinational corporations', 'World Bank — Developing countries'], 'year': '2004', 'edition': '1st', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9781576755129', 'publisher': 'Berrett‑Koehler Publishers, San Francisco', 'summary': 'A controversial memoir alleging how US‑linked corporates and agencies use debt and coercion to influence other nations.', 'audience': ['General Nonfiction Readers', 'Students & Academics in Political Science, Economics, IR, Development', 'Activists & Human Rights Advocates', 'Readers critical of globalization & US foreign policy'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Really interesting perspective of US economic ‘development’ abroad.” — Mehrsa'], 'links': ['https://www.google.com/books/edition/Confessions_of_an_Economic_Hit_Man/nJFFrLX-924C']}, {'title': 'Fiat Ruins Everything: How Our Financial System Is Rigged and How Bitcoin Fixes It', 'authors': 'Jimmy Song; David Perell', 'subjects': ['Business & Economics', 'Cryptography', 'Money & Monetary Policy', 'Security'], 'year': '2023', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9798987636374', 'publisher': 'Bitcoin Magazine Books, Nashville, TN', 'summary': 'A broad cultural critique of fiat money’s hidden costs across banking, education, housing, and art—with a Bitcoin alternative.', 'audience': ['Bitcoin adopters & crypto‑curious', 'Everyday readers frustrated by inflation', 'Macro‑critique fans'], 'difficulty': 'Intermediate', 'language': 'English', 'quotes': ['“Delivers a knockout punch… and highlights hope found in Bitcoin.” — Google Play review'], 'links': ['https://www.google.com/books/edition/Fiat_Ruins_Everything/NPBO0AEACAAJ']}, {'title': 'The Bitcoin Handbook: Key Concepts in Economics, Technology, and Psychology', 'authors': 'Anil Patel', 'subjects': ['Bitcoin & Digital Money', 'Economics & Money Management', 'Technology & Computing', 'Psychology & Mental Models'], 'year': '2023', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9789916723111', 'publisher': 'Konsensus Network, United States', 'summary': 'Illustrated mental models and heuristics for understanding Bitcoin and disruptive innovation.', 'audience': ['Bitcoin Beginners & Curious Learners', 'Non‑technical Professionals & Students', 'Skeptics and Critical Thinkers'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Bitcoin offers a lifeline around the world… this book will play a role.” — Alex Gladstein'], 'links': ['https://www.google.com/books/edition/The_Bitcoin_Handbook/oGQZ0AEACAAJ']}, {'title': 'Bitcoin Money: A Tale of Bitsville Discovering Good Money', 'authors': 'Michael Caras; Marina Yakubivska', 'subjects': ['Bitcoin — Juvenile fiction', 'Children’s stories', 'Finance — Technological innovations — Juvenile fiction', 'Money — Juvenile fiction'], 'year': '2019', 'formats': ['Hardcover', 'Paperback'], 'isbn': '9780578490670; 0578490676', 'publisher': '[publisher not identified]', 'summary': 'A children’s story introducing why societies need good money and how Bitcoin fits that role.', 'audience': ['Children aged 8–12', 'Juvenile audience', 'Family read‑alouds'], 'difficulty': 'Beginner / Children’s Level', 'language': 'English', 'quotes': ['“Great introduction for young children (and adults!) to sound money.” — Reader review'], 'links': ['https://www.google.com/books/edition/Bitcoin_Money/Oti5zgEACAAJ']}, {'title': 'The Little Bitcoin Book: Why Bitcoin Matters for Your Freedom, Finances, and Future', 'authors': 'Timi Ajiboye; Luis Buenaventura; Lily Liu; et al.', 'subjects': ['Bitcoin', 'Electronic commerce', 'Electronic funds transfers', 'Money'], 'year': '2019', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9781641990509; 1641990503', 'publisher': '21 Million Books, Redwood City, CA', 'summary': 'Short global primer on what’s wrong with money today and how Bitcoin offers an alternative, with global case studies.', 'audience': ['Curious newcomers to Bitcoin', 'General mainstream readers', 'Giftable intro'], 'difficulty': 'Beginner / Entry‑Level', 'language': 'English', 'quotes': ['“Great intro… ideal for someone who knows absolutely nothing.” — Pablo Sarmiento'], 'links': ['https://www.google.com/books/edition/The_Little_Bitcoin_Book/dp-WyAEACAAJ']}, {'title': 'The Little Book of Bitcoin: What You Need to Know that Wall Street Has Already Figured Out', 'authors': 'Anthony Scaramucci', 'subjects': ['Bitcoin', 'Investments', 'Personal finance', 'Wealth management', 'Securities'], 'year': '2025', 'formats': ['eBook', 'Audiobook', 'Hardcover', 'Audio CD'], 'isbn': '9781394286669; 139428666X', 'publisher': 'Wiley, Hoboken, New Jersey', 'summary': 'A finance‑centric overview of Bitcoin’s technology, potential, and implications for markets and society.', 'audience': ['Finance Professionals & Institutional Investors', 'Retail Investors & Crypto‑Curious Adults', 'Pros seeking a strategic primer'], 'difficulty': 'Intermediate', 'language': 'English', 'quotes': ['“Explains how Bitcoin fixes broken money and fosters freedom from repression.” — Robert F. Kennedy Jr.'], 'links': ['https://www.google.com/books/edition/The_Little_Book_of_Bitcoin/SRInEQAAQBAJ']}] },
+  { id: "niche", books: [{'title': 'Bitcoin Clarity: The Complete Beginner’s Guide to Understanding', 'authors': 'Kiara Bickers', 'subjects': ['Bitcoin', 'Cryptocurrencies', 'Digital currency'], 'year': '2020', 'formats': ['eBook', 'Audiobook', 'Paperback'], 'isbn': '9781733871280', 'publisher': 'Bickers & Son', 'summary': 'Visual, systems‑thinking approach that builds intuitive mental models instead of code or price hype.', 'audience': ['Absolute Beginners', 'Non‑Technical Adults', 'Visual & Systems Thinkers'], 'difficulty': 'Beginner', 'language': 'English', 'quotes': ['“I’m in my sixties… this opened my eyes.” — Steven'], 'links': ['https://www.google.com/books/edition/Bitcoin_Clarity/k3KKzQEACAAJ']}, {'title': 'Bitcoin: Everything Divided by 21 Million', 'authors': 'Knut Svanholm; Guy Swann', 'subjects': ['Bitcoin', 'Cryptocurrencies', 'Digital scarcity'], 'year': '2022', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9789916697207; 9916697205', 'publisher': 'Konsensus Network', 'summary': 'A big‑ideas exploration of time, scarcity, gold vs. Bitcoin, and why absolute digital scarcity matters.', 'audience': ['Philosophical & Big‑Ideas Thinkers', 'Intermediate Bitcoin Enthusiasts', 'Readers interested in scarcity economics'], 'difficulty': 'Intermediate to Advanced (Conceptual)', 'language': 'English', 'quotes': ['“Gold’s high stock‑to‑flow… why digital scarcity matters.”'], 'links': ['https://www.google.com/books/edition/Bitcoin/0cVE0AEACAAJ', 'https://search.worldcat.org/title/1349231314']}, {'title': 'Bitcoin: Independence Reimagined', 'authors': 'Knut Svanholm', 'subjects': ['Bitcoin & Monetary Philosophy', 'Investing & Economics'], 'year': '2020', 'formats': ['eBook', 'Audiobook', 'Paperback', 'Hardcover'], 'isbn': '9798634003498', 'publisher': 'Guy Swann', 'summary': 'A deeper rabbit‑hole dive into liberty, independence, and how Bitcoin reshapes old mental boxes.', 'audience': ['Bitcoin Philosophers & Intellectuals', 'Rabbit‑hole explorers'], 'difficulty': 'Moderate', 'language': 'English', 'quotes': ['“Excellent – more about freedom than bitcoin … must read.”'], 'links': ['https://www.google.com/books/edition/Bitcoin_Independence_Reimagined/_PSVzQEACAAJ']}, {'title': 'The Bitcoin Shortcut: Quickly Learn How Bitcoin Works, How to Invest, and Why It’s Changing the World', 'authors': 'Craig Anthony', 'subjects': ['Bitcoin', 'Business', 'Investing', 'Economics', 'Technology'], 'year': '2021', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9780990320289; 0990320286', 'publisher': 'Crypto Titan, LLC', 'summary': 'A fast yet thorough overview that covers fundamentals, under‑the‑hood mechanics, and beginner investing topics.', 'audience': ['Bitcoin Beginners', 'Aspiring Investors', 'Non‑Technical Learners', 'Busy Professionals'], 'difficulty': 'Beginner to Intermediate', 'language': 'English', 'quotes': ['“Takes readers from monetary concepts to hashes, signatures, and wallets.” — WhatIsBitcoin.com'], 'links': ['https://www.google.com/books/edition/The_Bitcoin_Shortcut/k6-3zgEACAAJ']}, {'title': 'Q&A About Bitcoin: From the Blockchain Concept to the Definition of the LNP/BP Suite', 'authors': 'David Coen', 'subjects': ['Bitcoin Technology & Applications', 'Business & Economics', 'Technology & Engineering'], 'year': '2019', 'edition': '1st', 'formats': ['eBook', 'Paperback', 'Hardcover'], 'isbn': '9798495855908; 9781697134780', 'publisher': 'Independently Published', 'summary': 'A concise Q&A reference that also introduces thinking in ‘sats’ and the LNP/BP stack.', 'audience': ['Bitcoin Beginners & Curious Learners', 'Intermediate users seeking clarification', 'Reference users'], 'difficulty': 'Intermediate to Advanced', 'language': 'English', 'quotes': ['“Concise, systematic, and digestible… useful to avoid common misunderstandings.” — Giacomo Zucco'], 'links': ['https://www.amazon.com/about-Bitcoin-blockchain-concept-definition-ebook/dp/B07ZVS3361']}] }
+];
+
+function el(tag, cls, html){ const e = document.createElement(tag); if(cls) e.className = cls; if(html!==undefined) e.innerHTML = html; return e; }
+function chips(list){ if(!list || !list.length) return ""; return list.map(t => `<span class="chip">${t}</span>`).join(""); }
+
+function renderCard(b){
+  const li = el('li','appear');
+  const title = b.links && b.links.length ? `<a class="title" href="${b.links[0]}" target="_blank" rel="noopener noreferrer">${b.title}</a>`
+                                          : `<span class="title">${b.title}</span>`;
+  const meta = `${b.authors ? ' — ' + b.authors : ''}${b.publisher ? ' • ' + b.publisher : ''}${b.year ? ' • ' + b.year : ''}${b.edition ? ' ('+b.edition+')' : ''}`;
+  li.innerHTML = `
+    <div>${title}<span class="meta">${meta}</span></div>
+    ${b.summary ? `<div class="desc">${b.summary}</div>` : ''}
+    <div class="chips">
+      ${chips(b.subjects)} ${chips(b.formats)} ${b.isbn ? `<span class="chip">ISBN: ${b.isbn}</span>`:''}
+    </div>
+    <div class="actions">
+      <button class="btn toggle">Show details</button>
+      ${b.links && b.links.length>1 ? `<div class="links">${b.links.slice(1).map((u,i)=>`<a href="${u}" target="_blank" rel="noopener" >Link ${i+2}</a>`).join(' · ')}</div>`:''}
+    </div>
+    <div class="details">
+      <div class="details-grid">
+        <div class="label">Audience</div><div class="value">${(b.audience||[]).join('; ')}</div>
+        <div class="label">Difficulty</div><div class="value">${b.difficulty||''}</div>
+        <div class="label">Language</div><div class="value">${b.language||''}</div>
+        <div class="label">Quotes</div><div class="value">${(b.quotes||[]).join('<br>')}</div>
+      </div>
+    </div>
+  `;
+  li.querySelector('.toggle').addEventListener('click', (e)=>{
+    const det = li.querySelector('.details');
+    const open = det.style.display === 'block';
+    det.style.display = open ? 'none' : 'block';
+    e.target.textContent = open ? 'Show details' : 'Hide details';
+  });
+  requestAnimationFrame(()=>li.classList.add('show'));
+  return li;
+}
+
+function render(){
+  SECTIONS.forEach(s => {
+    const ul = document.getElementById('list-'+s.id);
+    if(!ul) return;
+    ul.innerHTML = "";
+    s.books.forEach(b => ul.appendChild(renderCard(b)));
+  });
+}
+render();
+</script>
 </body>
 </html>
