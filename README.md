@@ -16,6 +16,6 @@ There are so many resources to go through. All that's needed is to replace, remo
 ## Progress:
 
 - Rearchitecture Static Site: Done
-- [BTC Resources](https://github.com/MrRGnome/btc-resources/issues/5) - 75% complete
-- [Lightning Resources](https://github.com/MrRGnome/btc-resources/issues/14) - 0% Done
+- [BTC Resources](https://github.com/MrRGnome/btc-resources/issues/5) - 100% complete
+- [Lightning Resources](https://github.com/MrRGnome/btc-resources/issues/14) - 10% Done
 - Architect Articles System - 0% Done
