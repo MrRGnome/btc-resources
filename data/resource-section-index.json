@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T01:22:56Z",
+  "generatedAt": "2026-03-07T17:44:27Z",
   "sections": {
     "bitcoin.html": {
       "getting started": "getting_started",
@@ -157,6 +157,7 @@
     },
     "bitcoin-information/forks.html": {
       "fork monitoring and statistics": "forkmon",
+      "history": "history",
       "dangerous forking software": "dangerous_forking"
     },
     "bitcoin-information/full-node.html": {
