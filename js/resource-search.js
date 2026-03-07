@@ -15,6 +15,37 @@
   function normalizeText(value) {
     return normalizeSpace((value || "").toLowerCase().replace(/[^a-z0-9+#'\-]+/g, " "));
   }
+  function getSharedJsonText(path) {
+    if (window.__btcGetSharedJsonText && typeof window.__btcGetSharedJsonText === "function") {
+      return window.__btcGetSharedJsonText(path);
+    }
+
+    window.__btcSharedJsonTextPromises = window.__btcSharedJsonTextPromises || {};
+
+    window.__btcGetSharedJsonText = function (sharedPath) {
+      if (!sharedPath) {
+        return Promise.reject(new Error("Missing JSON path."));
+      }
+
+      if (!window.__btcSharedJsonTextPromises[sharedPath]) {
+        window.__btcSharedJsonTextPromises[sharedPath] = fetch(sharedPath)
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error("Failed to load JSON: HTTP " + response.status + " (" + sharedPath + ")");
+            }
+            return response.text();
+          })
+          .catch(function (error) {
+            delete window.__btcSharedJsonTextPromises[sharedPath];
+            throw error;
+          });
+      }
+
+      return window.__btcSharedJsonTextPromises[sharedPath];
+    };
+
+    return window.__btcGetSharedJsonText(path);
+  }
 
   function getCurrentPagePath() {
     var path = (window.location.pathname || "").replace(/\\/g, "/");
@@ -632,16 +663,9 @@
       return hasFallback ? fallbackFactory() : null;
     }
 
-    return fetch(path)
-      .then(function (response) {
-        if (!response.ok) {
-          if (hasFallback) {
-            return fallbackValue();
-          }
-          throw new Error("Failed to load JSON: HTTP " + response.status + " (" + path + ")");
-        }
-
-        return response.json();
+    return getSharedJsonText(path)
+      .then(function (jsonText) {
+        return JSON.parse(jsonText);
       })
       .catch(function (error) {
         if (hasFallback) {
