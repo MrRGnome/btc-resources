@@ -30,9 +30,9 @@
             color: #FFFFFF;
             background: #ff0083;
         }
-    
+
         ::selection {
-            color: #FFFFFF; 
+            color: #FFFFFF;
             background: #ff0083;
         }
     </style>
@@ -51,13 +51,13 @@
             -webkit-appearance: none;
                -moz-appearance: none;
                     appearance: none;
-        
+
             /* Get rid of the default border in Firefox/Opera. */
             border: none;
-        
+
             /* Progress bar container for Firefox/IE10+ */
             background-color: transparent;
-        
+
             /* Progress bar value for IE10+ */
             color: #ff0083;
         }
@@ -1328,7 +1328,7 @@
             <div class="congratscontainer w-container">
                 <h2 class="h4congrats">Congratulations!</h2>
                 <p class="congratspara">You’ve just learned how Bitcoin works.</p>
-                <p class="congratspara">Want to go deeper? Check out <a href="/bitcoin-information.html">these educational resources.</a></p>
+                <p class="congratspara">Want to go deeper? Check out <a href="/bitcoin-information.html" data-resource-name="these educational resources." data-resource-page="bitcoin-information/bitcoin-explained.html" data-resource-category="Congratulations!" data-resource-url="/bitcoin-information.html" data-resource-tags="these educational resources.|Congratulations!|bitcoin explained|these|educational|congratulations|explained|bitcoin-information">these educational resources.</a></p>
                 <img src="./Bitcoin-Explained_files/5a3ac1f38ca2690001b7d24d_Congrat%20correct%20dark.svg" alt="Cryptocurrency Bitcoin Ethereum Blockchain" class="congratsimg">
                 <div class="sharetext">Share This Guide With Your Friends!</div>
                 <div class="sharebuttondiv">
@@ -1358,16 +1358,16 @@
     <script src="./Bitcoin-Explained_files/webflow.d20e69f61.js"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     <script>
-        $(document).on('ready', function() {  
-          var winHeight = $(window).height(), 
+        $(document).on('ready', function() {
+          var winHeight = $(window).height(),
               docHeight = $(document).height(),
               progressBar = $('progress'),
               max, value;
-        
+
           /* Set the max scrollable area */
           max = docHeight - winHeight;
           progressBar.attr('max', max);
-        
+
           $(document).on('scroll', function(){
              value = $(window).scrollTop();
              progressBar.attr('value', value);
@@ -1377,7 +1377,7 @@
 
     <script>
         Webflow.push(function() {
-          
+
           // Hover image change
           $('img[data-hover-image]').hover(function() {
             var el = $(this); el.attr('data-hover-original-image', el.attr('src')).attr('src', el.attr('data-hover-image'));
@@ -1389,55 +1389,55 @@
     <script>
         (function() {
           var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
-        
+
           NUM_CONFETTI = 400;
-        
+
           COLORS = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [0, 170, 255], [255, 0, 131]];
-        
+
           PI_2 = 2 * Math.PI;
-        
+
           canvas = document.getElementById("world");
-        
+
           context = canvas.getContext("2d");
-        
+
           window.w = 0;
-        
+
           window.h = 0;
-        
+
           resizeWindow = function() {
             window.w = canvas.width = window.innerWidth;
             return window.h = canvas.height = window.innerHeight;
           };
-        
+
           window.addEventListener('resize', resizeWindow, false);
-        
+
           window.onload = function() {
             return setTimeout(resizeWindow, 0);
           };
-        
+
           range = function(a, b) {
             return (b - a) * Math.random() + a;
           };
-        
+
           drawCircle = function(x, y, r, style) {
             context.beginPath();
             context.arc(x, y, r, 0, PI_2, false);
             context.fillStyle = style;
             return context.fill();
           };
-        
+
           xpos = 0.5;
-        
+
           document.onmousemove = function(e) {
             return xpos = e.pageX / w;
           };
-        
+
           window.requestAnimationFrame = (function() {
             return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
               return window.setTimeout(callback, 1000 / 60);
             };
           })();
-        
+
           Confetti = (function() {
             function Confetti() {
               this.style = COLORS[~~range(0, 5)];
@@ -1446,7 +1446,7 @@
               this.r2 = 2 * this.r;
               this.replace();
             }
-        
+
             Confetti.prototype.replace = function() {
               this.opacity = 0;
               this.dop = 0.03 * range(1, 4);
@@ -1457,7 +1457,7 @@
               this.vx = range(0, 2) + 8 * xpos - 5;
               return this.vy = 0.7 * this.r + range(-1, 1);
             };
-        
+
             Confetti.prototype.draw = function() {
               var ref;
               this.x += this.vx;
@@ -1475,11 +1475,11 @@
               }
               return drawCircle(~~this.x, ~~this.y, this.r, this.rgb + "," + this.opacity + ")");
             };
-        
+
             return Confetti;
-        
+
           })();
-        
+
           confetti = (function() {
             var j, ref, results;
             results = [];
@@ -1488,7 +1488,7 @@
             }
             return results;
           })();
-        
+
           window.step = function() {
             var c, j, len, results;
             requestAnimationFrame(step);
@@ -1500,9 +1500,9 @@
             }
             return results;
           };
-        
+
           step();
-        
+
         }).call(this);
     </script>
 </body>

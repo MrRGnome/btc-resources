@@ -1,0 +1,307 @@
+{
+  "generatedAt": "2026-03-07T01:22:56Z",
+  "sections": {
+    "bitcoin.html": {
+      "getting started": "getting_started",
+      "setting up a wallet": "setting_up_wallet",
+      "running a node": "running_node",
+      "security": "security",
+      "buying & earning btc": "buying",
+      "the history of bitcoin": "history",
+      "transaction fee estimates": "tx_fee_estimates",
+      "privacy": "privacy",
+      "online & offline classes": "courses",
+      "technical resources": "technical_resources",
+      "developer tools": "dev_tools",
+      "block explorers": "explorers",
+      "books": "books",
+      "careers": "careers",
+      "network statistics": "stats",
+      "mining": "mining",
+      "news sites": "news",
+      "investment theses": "theses",
+      "documentaries": "documentaries",
+      "video presentations": "video_presentations",
+      "podcasts": "podcasts",
+      "blogs": "blogs",
+      "discussion forums": "forums",
+      "x / twitter": "twitter",
+      "visualizations": "visualizations",
+      "data anchoring": "data_anchoring",
+      "economics": "economics",
+      "art & music": "art",
+      "advanced trading": "advanced_trading",
+      "exchange rate data": "live_exchange_data",
+      "merchant adoption": "merchant_adoption",
+      "tax accounting": "tax_accounting",
+      "charities": "charity",
+      "legal": "legal",
+      "governance": "governance",
+      "forks": "forks",
+      "other layers": "layers",
+      "other resources": "resource_lists"
+    },
+    "lightning.html": {
+      "getting started": "getting_started",
+      "history": "history",
+      "miscellaneous statistics": "statistics",
+      "deep dive technical resources": "technical_resources",
+      "developer documentation": "docs",
+      "developer tools": "dev_tools",
+      "node management tools": "node_tools",
+      "liquidity & routing": "liquidity",
+      "desktop wallets": "desktop_wallets",
+      "mobile wallets": "mobile_wallets",
+      "custodial wallets": "custodial_wallets",
+      "node implementations": "implementations",
+      "diy nodes": "diy_nodes",
+      "plug & play nodes": "plug_play_nodes",
+      "explorers": "explorers",
+      "visualizations": "visualizations",
+      "documentaries": "documentaries",
+      "video presentations": "videos",
+      "news sites": "news",
+      "podcasts": "podcasts",
+      "blogs": "blogs",
+      "discussion forums": "forums",
+      "twitter": "twitter",
+      "applications": "apps",
+      "earn satoshis": "earn",
+      "gaming": "gaming",
+      "tipping": "tipping",
+      "merchant adoption": "merchant_adoption",
+      "merchant tools": "merchant_tools",
+      "trading": "trading",
+      "economics": "economics",
+      "legal": "legal",
+      "research": "research",
+      "other resource lists": "resources"
+    },
+    "bitcoin-information/art-music.html": {
+      "fine art": "art",
+      "memes": "memes",
+      "accessories & apparel": "apparel",
+      "music": "music"
+    },
+    "bitcoin-information/block-explorers.html": {
+      "block explorers": "explorers",
+      "blockchain analysis": "chainalysis",
+      "open source block explorers": "oss_explorers"
+    },
+    "bitcoin-information/blogs.html": {
+      "technical": "technical",
+      "less technical": "nontechnical"
+    },
+    "bitcoin-information/books.html": {
+      "technical books": "technical",
+      "non-technical books": "nontechnical",
+      "bitcoin history": "history",
+      "economics & money": "economics",
+      "freedom": "freedom"
+    },
+    "bitcoin-information/buying-earning.html": {
+      "buying bitcoins in person": "buying",
+      "no kyc p2p exchanges (global)": "p2p",
+      "no kyc exchanges (global)": "tor",
+      "non-custodial exchanges": "tor",
+      "custodial exchanges": "tor",
+      "earning bitcoins": "earning",
+      "buying & selling strategies": "strategies",
+      "retirement accounts": "retirement"
+    },
+    "bitcoin-information/careers.html": {
+      "job postings": "careers",
+      "internships": "intern",
+      "physical community spaces": "physical",
+      "venture capital": "investors"
+    },
+    "bitcoin-information/charity.html": {
+      "lists of charities & platforms": "lists",
+      "bitcoin developer grants": "developers",
+      "bitcoin accepting charities": "charities"
+    },
+    "bitcoin-information/data-anchor.html": {
+      "learn": "learn",
+      "view data anchors": "view_data",
+      "create data anchors": "data_anchoring"
+    },
+    "bitcoin-information/developer-tools.html": {
+      "blockchain querying": "indexers",
+      "electrum servers": "electrum",
+      "developer tools": "dev_tools",
+      "bitcoin scripting": "script",
+      "programming libraries": "libraries",
+      "signed message verifiers": "message",
+      "testnet network info & faucets": "faucets"
+    },
+    "bitcoin-information/discussion-forums.html": {
+      "discussion forums": "forums"
+    },
+    "bitcoin-information/documentaries.html": {
+      "documentaries": "documentaries"
+    },
+    "bitcoin-information/economics.html": {
+      "economics": "economics",
+      "books": "books",
+      "free books": "freebooks",
+      "statistics": "statistics"
+    },
+    "bitcoin-information/exchange-data.html": {
+      "exchange data": "data",
+      "exchange rate apis": "api",
+      "price indexes": "indexes",
+      "etfs (these are not bitcoin!)": "etf"
+    },
+    "bitcoin-information/fee-estimates.html": {
+      "transaction fee estimates": "estimates"
+    },
+    "bitcoin-information/forks.html": {
+      "fork monitoring and statistics": "forkmon",
+      "dangerous forking software": "dangerous_forking"
+    },
+    "bitcoin-information/full-node.html": {
+      "running a node": "running",
+      "diy guides": "diy",
+      "full node dashboards": "dashboards",
+      "full node software": "software",
+      "alpha / unmaintained full node software": "alpha",
+      "dangerous forking software": "dangerous_forking"
+    },
+    "bitcoin-information/getting-started.html": {
+      "first steps": "steps",
+      "how it works": "how",
+      "the whitepaper": "whitepaper",
+      "misconceptions": "misconceptions",
+      "why it's hard to understand": "understanding",
+      "why bitcoin matters": "why"
+    },
+    "bitcoin-information/governance.html": {
+      "governance": "governance"
+    },
+    "bitcoin-information/history.html": {
+      "the history of bitcoin": "history",
+      "logs & transcripts": "logs",
+      "satoshi nakamoto": "satoshi",
+      "security incidents": "security",
+      "books": "books",
+      "scaling debate": "scaling"
+    },
+    "bitcoin-information/investment-theses.html": {
+      "investment theses": "theses",
+      "corporate treasuries": "corporate",
+      "value models": "models",
+      "on altcoins": "altcoins"
+    },
+    "bitcoin-information/legal.html": {
+      "legal news": "legal",
+      "global regulations": "regulations",
+      "law firms": "firms"
+    },
+    "bitcoin-information/merchant-adoption.html": {
+      "where to spend bitcoins": "merchants",
+      "gift cards": "gift_cards",
+      "bitcoin debit cards": "debit_cards",
+      "merchant payment processing": "payments",
+      "btcpay integrations": "btcpay",
+      "online markets": "markets"
+    },
+    "bitcoin-information/mining.html": {
+      "mining info": "info",
+      "mining guides": "guides",
+      "energy consumption": "energy",
+      "other perspectives": "other"
+    },
+    "bitcoin-information/news.html": {
+      "news sites": "news",
+      "newsletters": "newsletters"
+    },
+    "bitcoin-information/online-offline-classes.html": {
+      "non-technical online classes": "nontechnical",
+      "technical online classes": "technical",
+      "technical in person/offline classes": "offline",
+      "knowledge tests": "tests"
+    },
+    "bitcoin-information/other-layers.html": {
+      "lightning network": "lightning",
+      "covenants": "covenants",
+      "sidechains, statechains, drivechains, and shitcoins": "sidechains",
+      "bitvm": "bitvm",
+      "discreet log contracts": "dlcs",
+      "rollups": "rollups",
+      "identity protocols": "identity",
+      "other protocols": "protocols"
+    },
+    "bitcoin-information/other-resources.html": {
+      "bitcoin resources": "bitcoin",
+      "other languages": "languages"
+    },
+    "bitcoin-information/podcasts.html": {
+      "audio podcasts": "podcasts",
+      "youtube channels": "youtube"
+    },
+    "bitcoin-information/privacy.html": {
+      "bitcoin privacy guides": "guides",
+      "privacy software": "software",
+      "alternative comms channels": "comms",
+      "general privacy": "general",
+      "anonymous sim / sms": "sim"
+    },
+    "bitcoin-information/recommended-wallets.html": {
+      "wallet basics": "wallets",
+      "recommended wallets": "recommended_wallets",
+      "wallet backups": "backups",
+      "key storage hardware": "hardware",
+      "guides": "guides",
+      "wallet recovery": "recovery"
+    },
+    "bitcoin-information/security.html": {
+      "general security": "general",
+      "bitcoin security guides": "guides",
+      "security checks": "checks",
+      "wallet backups": "backups",
+      "cold storage guides": "cold_storage",
+      "bitcoin security disclosures": "disclosures",
+      "known scams": "scams"
+    },
+    "bitcoin-information/statistics-metrics.html": {
+      "blockchain statistics": "blockchain_stats",
+      "node statistics": "node_stats",
+      "miscellaneous metrics": "stats"
+    },
+    "bitcoin-information/tax-accounting.html": {
+      "tax accounting software": "software",
+      "tax accounting professionals": "accountants",
+      "appraisers": "appraisers"
+    },
+    "bitcoin-information/technical-resources.html": {
+      "technical resources": "resources",
+      "covenants": "covenants",
+      "miniscript resources": "miniscript",
+      "technical classes": "classes",
+      "technical books": "books",
+      "academic research": "academic",
+      "design": "design",
+      "contributing to bitcoin core": "core"
+    },
+    "bitcoin-information/trading.html": {
+      "advanced trading": "advanced",
+      "charts & metrics": "charts",
+      "trading bots": "bots",
+      "trading terminals": "terminals",
+      "trading simulators": "simulators"
+    },
+    "bitcoin-information/twitter.html": {
+      "x lists": "x"
+    },
+    "bitcoin-information/video-presentations.html": {
+      "presentation compilations": "compilations",
+      "conference presentations": "conferences",
+      "meetup presentations": "meetups"
+    },
+    "bitcoin-information/visualizations.html": {
+      "realtime transactions": "transactions",
+      "price visualizations": "price",
+      "other visualizations": "visualizations"
+    }
+  }
+}
