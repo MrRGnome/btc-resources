@@ -1,4 +1,4 @@
-/*!* Bootstrap v3.3.7 (http://getbootstrap.com)
+﻿/*!* Bootstrap v3.3.7 (http://getbootstrap.com)
 * Copyright 2011-2016 Twitter, Inc.
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
 
@@ -1744,7 +1744,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-btn>.
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid transparent;
   padding-left: 30px;
   padding-right: 30px;

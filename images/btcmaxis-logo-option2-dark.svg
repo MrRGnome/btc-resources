@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="48" viewBox="0 0 320 48" role="img" aria-labelledby="title desc">
+  <title id="title">BTCMAXIS Option 2</title>
+  <desc id="desc">Bitcoin symbol variant 2, slight italic tilt with connected clipped stems.</desc>
+  <circle cx="24" cy="24" r="20" fill="#CC4C00"/>
+  <g transform="rotate(-9 24 24)">
+    <rect x="20.9" y="12.5" width="2" height="5.2" fill="#FFFFFF"/>
+    <rect x="25.1" y="12.5" width="2" height="5.2" fill="#FFFFFF"/>
+    <rect x="20.9" y="30.1" width="2" height="4.8" fill="#FFFFFF"/>
+    <rect x="25.1" y="30.1" width="2" height="4.8" fill="#FFFFFF"/>
+    <text x="24" y="32.1" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">B</text>
+  </g>
+  <text x="56" y="33" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="2" fill="#F3F3F3" stroke="#FFFFFF" stroke-width="1.1" paint-order="stroke fill">BTC</text>
+  <text x="123" y="33" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="2" fill="#CC4C00">MAXIS</text>
+</svg>

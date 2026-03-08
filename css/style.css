@@ -11,6 +11,20 @@ body {
 .navbar-brand {
 	padding-left: 0px;
 }
+.navbar-brand.navbar-brand-logo {
+  width: 220px;
+  height: 50px;
+  padding: 0;
+  background-image: url("../images/btcmaxis-logo-option3-light.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand.navbar-brand-logo {
+    width: 220px;
+  }
+}
 .navbar-default .navbar-brand a:hover {
   color: #CC4C00;
 }
@@ -849,3 +863,5 @@ input[type=checkbox] + label:hover {
   z-index: 2101;
   pointer-events: none;
 }
+
+

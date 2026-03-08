@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="48" viewBox="0 0 320 48" role="img" aria-labelledby="title desc">
+  <title id="title">BTCMAXIS</title>
+  <desc id="desc">BTCMAXIS brand logo with orange bitcoin-inspired mark and uppercase wordmark.</desc>
+  <circle cx="24" cy="24" r="20" fill="#CC4C00"/>
+  <text x="24" y="31" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">B</text>
+  <rect x="18" y="12" width="2.5" height="24" fill="#FFFFFF"/>
+  <rect x="27.5" y="12" width="2.5" height="24" fill="#FFFFFF"/>
+  <text x="56" y="33" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="2" fill="#121212" stroke="#FFFFFF" stroke-width="1.1" paint-order="stroke fill">BTC</text>
+  <text x="123" y="33" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="2" fill="#CC4C00">MAXIS</text>
+</svg>
