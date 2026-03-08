@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   "use strict";
 
   var SEARCH_MIN_CHARS = 2;
@@ -444,6 +444,9 @@
     var panel = document.getElementById("nav-resource-search-results");
     var toggleButton = document.getElementById("nav-resource-search-toggle");
     var navContainer = document.getElementById("myDefaultNavbar1");
+    var initialQuery = getNavSearchQueryParam();
+    var hasKeyboardInput = false;
+    var hasAutoNavigatedFromUrlQuery = false;
     var navRoot = toggleButton.closest ? toggleButton.closest(".navbar") : document.querySelector(".navbar");
     if (!navRoot) {
       navRoot = document.querySelector(".navbar");
@@ -495,6 +498,34 @@
       } else {
         navRoot.classList.remove("nav-search-overlay-open");
       }
+    }
+
+    function queryMatchesInitialUrlQuery(query) {
+      if (initialQuery === null) {
+        return false;
+      }
+      return normalizeSpace(query || "") === normalizeSpace(initialQuery || "");
+    }
+
+    function tryAutoNavigateSingleResult(results, query) {
+      if (hasAutoNavigatedFromUrlQuery || hasKeyboardInput) {
+        return false;
+      }
+      if (!queryMatchesInitialUrlQuery(query)) {
+        return false;
+      }
+      if (!Array.isArray(results) || results.length !== 1) {
+        return false;
+      }
+
+      var destination = normalizeSpace((results[0] && results[0].url) || "");
+      if (!destination) {
+        return false;
+      }
+
+      hasAutoNavigatedFromUrlQuery = true;
+      window.location.assign(destination);
+      return true;
     }
 
     function openSearch() {
@@ -554,6 +585,9 @@
     });
 
     input.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") {
+        hasKeyboardInput = true;
+      }
       if (event.key === "Escape") {
         closeSearch(true);
       }
@@ -602,12 +636,14 @@
       }
     });
 
-    var initialQuery = getNavSearchQueryParam();
     if (initialQuery !== null) {
       input.value = initialQuery;
       openSearch();
 
       var initialResults = searchResources(resourceIndex, initialQuery);
+      if (tryAutoNavigateSingleResult(initialResults, initialQuery)) {
+        return;
+      }
       renderResults(initialResults, initialQuery);
 
       setTimeout(function () {
@@ -642,6 +678,7 @@
     bootstrap();
   }
 })();
+
 
 
 
