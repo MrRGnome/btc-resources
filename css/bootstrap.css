@@ -2491,3 +2491,27 @@ a.label:hover,a.label:focus {
     display: none!important;
   }
 }
+
+/* Article layout */
+.article-author-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#article-body .article-author-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+#article-feed-list .article-author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}

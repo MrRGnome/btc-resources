@@ -9,3 +9,4 @@ __pycache__/
 
 # Local static-server logs/temp
 *.http.log
+*.log

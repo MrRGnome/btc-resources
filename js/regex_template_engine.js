@@ -1,4 +1,4 @@
-﻿var TemplateEngine = {};
+var TemplateEngine = {};
 TemplateEngine.settings = {};
 
 //Set this to wherever your html templates are that will be loaded relative to your root directory, include a leading slash and no trailing slash. Leave empty if loading from root directory.
@@ -11,12 +11,15 @@ if(window.location.href.search(TemplateEngine.settings.SUBDIRECTORY) == -1)
 
 //Set this to a css class name which includes the property "display: hidden;"
 TemplateEngine.settings.HIDDEN_CLASS = "hidden";
+document.getElementsByTagName("body")[0].style.display = "none";
 
 //Auto parse document
 TemplateEngine.settings.AUTOLOAD = true;
 
 //Should document be hidden until some future parsed point?
 TemplateEngine.settings.HIDE_TEMPLATE = true;
+if(TemplateEngine.settings.HIDE_TEMPLATE)
+    document.getElementsByTagName("body")[0].style.display = "none";
 
 //Enable one-way binding where changes to the javascript variable are reflected to the HTML template (Alpha feature, may experience bugs. Disabled by default)
 TemplateEngine.settings.BINDING = false;
@@ -45,7 +48,10 @@ TemplateEngine.Start = function (e, force) {
                     $(metas[i]).attr("content", TemplateEngine.ParseAndReplace(content));
             }
         }
+        
     }
+    if(TemplateEngine.settings.HIDE_TEMPLATE)
+        document.getElementsByTagName("body")[0].style.display = "block";
 };
 
 document.addEventListener('DOMContentLoaded', TemplateEngine.Start, false);

@@ -1,0 +1,16 @@
+<section>
+  <article>
+    <p class="date article-author-meta">
+      <a href="{{authorSearchHref}}" aria-label="Search for {{authors.0.username}}">
+        <img class="article-author-avatar" src="{{authors.0.image}}" alt="{{authors.0.username}} profile picture">
+      </a>
+      <span>By <a href="{{authorSearchHref}}">{{authors.0.username}}</a> | Published <time datetime="{{article_time}}">{{article_time.todate.local}}</time></span>
+    </p>
+    <div>{{contentHtml}}</div>
+    <hr>
+    <p><small>{{disclaimer}}</small></p>
+    <p><a href="{{commentsHref}}" target="_blank" rel="noopener">Comments</a></p>
+  </article>
+</section>
+
+

@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   "use strict";
 
   var SEARCH_MIN_CHARS = 2;
@@ -7,6 +7,8 @@
     { resourceKey: "bitcoindiscordcom", terms: ["help", "discord", "chat", "support"] },
     { resourceKey: "knotsliescom", terms: ["knots", "bip110"] },
   ];
+  var ARTICLE_MANIFEST_URL = "https://raw.githubusercontent.com/MrRGnome/articles/refs/heads/master/articles.json";
+
   var RESULT_TEMPLATE_NAME = "nav-search-result-item.html";
 
   var resultTemplate = "";
@@ -81,6 +83,160 @@
     }
     return "./data/resource-index.json";
   }
+
+  function createEmptyArticleManifestPayload() {
+    return { articles: {} };
+  }
+
+  function normalizeStringArray(value) {
+    if (!Array.isArray(value)) {
+      return [];
+    }
+
+    var normalized = [];
+    var seen = Object.create(null);
+
+    value.forEach(function (item) {
+      var clean = normalizeSpace(String(item || ""));
+      var key = clean.toLowerCase();
+      if (!clean || seen[key]) {
+        return;
+      }
+      seen[key] = true;
+      normalized.push(clean);
+    });
+
+    return normalized;
+  }
+
+  function deriveArticleId(fallbackId, filename) {
+    var id = normalizeSpace(fallbackId || "");
+    if (id) {
+      return id;
+    }
+
+    var cleanFile = normalizeSpace(filename || "").replace(/\\/g, "/");
+    if (!cleanFile) {
+      return "";
+    }
+
+    var fileName = cleanFile.split("/").pop() || "";
+    return normalizeSpace(fileName.replace(/\.json$/i, ""));
+  }
+
+  function normalizeManifestEntries(manifest) {
+    var entries = [];
+    var source = manifest && manifest.articles;
+
+    if (!source || typeof source !== "object") {
+      return entries;
+    }
+
+    if (Array.isArray(source)) {
+      source.forEach(function (item) {
+        if (!item || typeof item !== "object") {
+          return;
+        }
+
+        var id = deriveArticleId(item.id, item.filename);
+        if (!id) {
+          return;
+        }
+
+        entries.push({
+          id: id,
+          title: normalizeSpace(item.title || ""),
+          author: normalizeSpace(item.author || ""),
+          line1: normalizeSpace(item.line1 || ""),
+          line2: normalizeSpace(item.line2 || ""),
+          tags: normalizeStringArray(item.tags)
+        });
+      });
+      return entries;
+    }
+
+    Object.keys(source).forEach(function (idKey) {
+      var item = source[idKey];
+      if (!item || typeof item !== "object") {
+        return;
+      }
+
+      var id = deriveArticleId(idKey, item.filename);
+      if (!id) {
+        return;
+      }
+
+      entries.push({
+        id: id,
+        title: normalizeSpace(item.title || ""),
+        author: normalizeSpace(item.author || ""),
+        line1: normalizeSpace(item.line1 || ""),
+        line2: normalizeSpace(item.line2 || ""),
+        tags: normalizeStringArray(item.tags)
+      });
+    });
+
+    return entries;
+  }
+
+  function mapArticleToSearchResource(entry) {
+    var title = normalizeSpace(entry.title || "");
+    var line1 = normalizeSpace(entry.line1 || "");
+    var line2 = normalizeSpace(entry.line2 || "");
+    var tags = normalizeStringArray(entry.tags);
+    var summary = normalizeSpace((line1 + " " + line2).trim());
+
+    if (!tags.length) {
+      tags = normalizeStringArray([title, entry.id, entry.author]);
+    }
+
+    return {
+      name: title || ("Article " + entry.id),
+      page: title || ("Article " + entry.id),
+      categoryHeader: normalizeSpace(entry.author || ""),
+      category: line1,
+      url: "/article.html?id=" + encodeURIComponent(entry.id || ""),
+      tags: tags.slice(),
+      content: line2,
+      externalSummary: summary,
+      externalKeywords: tags.slice()
+    };
+  }
+
+  function mergeArticleResourcesIntoIndex(indexPayload, manifestPayload) {
+    var payload = (indexPayload && typeof indexPayload === "object") ? indexPayload : { resources: [] };
+    if (!Array.isArray(payload.resources)) {
+      payload.resources = [];
+    }
+
+    var seenByUrlKey = Object.create(null);
+    payload.resources.forEach(function (resource) {
+      var urlKey = normalizeDestinationUrl(resource && resource.url ? resource.url : "");
+      if (urlKey) {
+        seenByUrlKey[urlKey] = true;
+      }
+    });
+
+    var articleEntries = normalizeManifestEntries(manifestPayload);
+    articleEntries.forEach(function (entry) {
+      var articleResource = mapArticleToSearchResource(entry);
+      var articleUrlKey = normalizeDestinationUrl(articleResource.url || "");
+      if (articleUrlKey && seenByUrlKey[articleUrlKey]) {
+        return;
+      }
+      if (articleUrlKey) {
+        seenByUrlKey[articleUrlKey] = true;
+      }
+      payload.resources.push(articleResource);
+    });
+
+    if (typeof payload.resourceCount === "number") {
+      payload.resourceCount = payload.resources.length;
+    }
+
+    return payload;
+  }
+
   function getNavSearchQueryParam() {
     try {
       var params = new URLSearchParams(window.location.search || "");
@@ -652,9 +808,31 @@
     }
   }
   function loadResourceIndex(indexPath) {
-    return getSharedJsonText(indexPath)
+    var indexPromise = loadJsonWithCache(indexPath);
+    var articlesPromise = loadJsonWithCache(ARTICLE_MANIFEST_URL, createEmptyArticleManifestPayload);
+
+    return Promise.all([indexPromise, articlesPromise])
+      .then(function (values) {
+        return mergeArticleResourcesIntoIndex(values[0], values[1]);
+      });
+  }
+
+  function loadJsonWithCache(path, fallbackFactory) {
+    var hasFallback = typeof fallbackFactory === "function";
+
+    function fallbackValue() {
+      return hasFallback ? fallbackFactory() : null;
+    }
+
+    return getSharedJsonText(path)
       .then(function (jsonText) {
         return JSON.parse(jsonText);
+      })
+      .catch(function (error) {
+        if (hasFallback) {
+          return fallbackValue();
+        }
+        throw error;
       });
   }
 

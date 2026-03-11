@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 body { 
 	text-align: left;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
@@ -28,11 +28,22 @@ body {
 .navbar-default .navbar-brand a:hover {
   color: #CC4C00;
 }
-#myDefaultNavbar1 a:link {
-  font-weight: normal;
+#myDefaultNavbar1 .navbar-nav > li > a,
+#myDefaultNavbar1 .navbar-nav > li > a:link,
+#myDefaultNavbar1 .navbar-nav > li > a:visited,
+#myDefaultNavbar1 .navbar-nav > li > a:hover,
+#myDefaultNavbar1 .navbar-nav > li > a:active,
+#myDefaultNavbar1 .navbar-nav > li > a:focus {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
 }
-#myDefaultNavbar1 .active a:link {
-  font-weight: bold;
+#myDefaultNavbar1 .navbar-nav > .active > a,
+#myDefaultNavbar1 .navbar-nav > .active > a:link,
+#myDefaultNavbar1 .navbar-nav > .active > a:visited,
+#myDefaultNavbar1 .navbar-nav > .active > a:hover,
+#myDefaultNavbar1 .navbar-nav > .active > a:focus {
+  font-weight: 700 !important;
 }
 h1 {
 	font-weight: 600;
@@ -865,3 +876,43 @@ input[type=checkbox] + label:hover {
 }
 
 
+
+
+
+/* Article content rendering */
+#article-body .article-content-image,
+#article-feed-list .article-content-image {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+#article-body .article-figure,
+#article-feed-list .article-figure {
+  margin: 18px 0;
+}
+
+#article-body .article-figure figcaption,
+#article-feed-list .article-figure figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666666;
+}
+
+#article-body blockquote.article-blockquote,
+#article-feed-list blockquote.article-blockquote {
+  margin: 18px 0;
+  padding: 12px 16px;
+  border-left: 4px solid #CC4C00;
+  background: #f5f5f5;
+  font-style: italic;
+}
+
+#article-body blockquote.article-blockquote > :last-child,
+#article-feed-list blockquote.article-blockquote > :last-child {
+  margin-bottom: 0;
+}
