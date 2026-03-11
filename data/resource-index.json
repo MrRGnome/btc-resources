@@ -22518,34 +22518,6 @@
       "content": "Bitcoin Discord"
     },
     {
-      "name": "Bitcoin Knots Discord",
-      "page": "bitcoin-information/discussion-forums.html",
-      "categoryHeader": "Discussion Forums",
-      "category": "Discussion Forums",
-      "url": "https://discord.gg/tFCQ5hvbAY",
-      "tags": [
-        "Bitcoin Knots Discord",
-        "Discussion Forums",
-        "knots",
-        "discord",
-        "discussion",
-        "forums",
-        "discord.gg",
-        "gg",
-        "tfcq5hvbay",
-        "check",
-        "community",
-        "hang",
-        "members",
-        "enjoy",
-        "free",
-        "voice",
-        "text",
-        "chat"
-      ],
-      "content": "Bitcoin Knots Discord"
-    },
-    {
       "name": "Bitcoin Talk Forum",
       "page": "bitcoin-information/discussion-forums.html",
       "categoryHeader": "Discussion Forums",
@@ -25848,34 +25820,6 @@
       "content": "Who Controls Bitcoin Core?"
     },
     {
-      "name": "Why Run a Full Node?",
-      "page": "bitcoin-information/full-node.html",
-      "categoryHeader": "Running a Node",
-      "category": "Running a Node",
-      "url": "https://medium.com/@Fiach_dubh/why-bitcoin-knots-instead-of-bitcoin-core-8ef60dcaf363",
-      "tags": [
-        "Why Run a Full Node?",
-        "Running a Node",
-        "full node",
-        "why",
-        "run",
-        "full",
-        "node",
-        "why bitcoin knots instead of core",
-        "knots",
-        "instead",
-        "core",
-        "running",
-        "medium.com",
-        "medium",
-        "fiach",
-        "dubh",
-        "why-bitcoin-knots-instead-of-bitcoin-core-8ef60dcaf363",
-        "medium article"
-      ],
-      "content": "Why Run a Full Node?"
-    },
-    {
       "name": "How to Run a Full Node",
       "page": "bitcoin-information/full-node.html",
       "categoryHeader": "Running a Node",
@@ -25929,37 +25873,6 @@
         "bitcoin-core-config-generator"
       ],
       "content": "Bitcoin Core Config Generator"
-    },
-    {
-      "name": "Bitcoin Knots Config Generator",
-      "page": "bitcoin-information/full-node.html",
-      "categoryHeader": "Running a Node",
-      "category": "Running a Node",
-      "url": "https://bitcoin-knots-config-generator.netlify.app/",
-      "tags": [
-        "Bitcoin Knots Config Generator",
-        "Running a Node",
-        "full node",
-        "knots",
-        "config",
-        "generator",
-        "node config generator",
-        "node",
-        "running",
-        "full",
-        "bitcoin-knots-config-generator.netlify.app",
-        "bitcoin",
-        "netlify",
-        "create",
-        "edit",
-        "configuration",
-        "files",
-        "nodes",
-        "supports",
-        "core",
-        "editor"
-      ],
-      "content": "Bitcoin Knots Config Generator"
     },
     {
       "name": "Bitcoin Config Editor",
@@ -26024,43 +25937,6 @@
         "along"
       ],
       "content": "Ministry of Nodes Guides"
-    },
-    {
-      "name": "BTCsessions Knots Guide",
-      "page": "bitcoin-information/full-node.html",
-      "categoryHeader": "Running a Node",
-      "category": "Running a Node",
-      "url": "https://youtu.be/zT4NuAaH3EM?si=WWW44AQn-_YtDRhy",
-      "tags": [
-        "BTCsessions Knots Guide",
-        "Running a Node",
-        "full node",
-        "btcsessions",
-        "knots",
-        "node guides",
-        "node",
-        "guides",
-        "running",
-        "full",
-        "youtu.be",
-        "youtu",
-        "be",
-        "zt4nuaah3em",
-        "youtube",
-        "video",
-        "run",
-        "desktop",
-        "umbrel",
-        "looking",
-        "break",
-        "away",
-        "defaults",
-        "tutorial",
-        "show",
-        "switch",
-        "over"
-      ],
-      "content": "BTCsessions Knots Guide"
     },
     {
       "name": "Node Implementation Comparison Guide",
