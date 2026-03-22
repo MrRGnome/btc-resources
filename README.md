@@ -7,7 +7,7 @@ You can help at [https://github.com/MrRGnome/btc-resources](https://github.com/M
 You can see a list of what has already been done and what needs doing here.
 [https://github.com/MrRGnome/btc-resources/issues/5](https://github.com/MrRGnome/btc-resources/issues/5)
 
-We organize in the [Bitcoin Discord](http://bitcoindiscord.com). You can also make changes here via PR, or review content and suggest changes via github issues.
+We organize in the [Bitcoin Discord](https://discord.btcmaxis.com). You can also make changes here via PR, or review content and suggest changes via github issues.
 
 The actual website is published from the repo here https://btcmaxis.com/
 
@@ -18,4 +18,6 @@ There are so many resources to go through. All that's needed is to replace, remo
 - Rearchitecture Static Site: Done
 - [BTC Resources](https://github.com/MrRGnome/btc-resources/issues/5) - 100% complete
 - [Lightning Resources](https://github.com/MrRGnome/btc-resources/issues/14) - 10% Done
-- Architect Articles System - 0% Done
+- Articles System - 100% Done
+- Search System - 100% Done
+- Discord Integration - 75% Done
