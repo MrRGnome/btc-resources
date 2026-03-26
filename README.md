@@ -7,7 +7,7 @@ You can help at [https://github.com/MrRGnome/btc-resources](https://github.com/M
 You can see a list of what has already been done and what needs doing here.
 [https://github.com/MrRGnome/btc-resources/issues/5](https://github.com/MrRGnome/btc-resources/issues/5)
 
-We organize in the [Bitcoin Discord](https://discord.btcmaxis.com). You can also make changes here via PR, or review content and suggest changes via github issues.
+We organize in the [Bitcoin Discord](https://btcmaxis.com/discord). You can also make changes here via PR, or review content and suggest changes via github issues.
 
 The actual website is published from the repo here https://btcmaxis.com/
 
