@@ -13740,26 +13740,6 @@
       "sourceKind": "remote_html",
       "fetchedAt": "2026-03-06T05:02:02.336284+00:00"
     },
-    "https://discord.gg/tFCQ5hvbAY": {
-      "ok": true,
-      "summary": "Check out the Bitcoin Knots community on Discord - hang out with 700 other members and enjoy free voice and text chat.",
-      "keywords": [
-        "knots",
-        "check",
-        "community",
-        "discord",
-        "hang",
-        "members",
-        "enjoy",
-        "free",
-        "voice",
-        "text",
-        "chat"
-      ],
-      "title": "Bitcoin Knots",
-      "sourceKind": "remote_html",
-      "fetchedAt": "2026-03-06T05:02:02.377196+00:00"
-    },
     "https://bitcointalk.org/": {
       "ok": true,
       "summary": "Bitcoin Forum - Index",
@@ -15965,27 +15945,6 @@
       "title": "GitHub - BlockchainCommons/GordianServer-macOS: Tor-protected full-node GordianServer for macOS · GitHub",
       "sourceKind": "remote_html",
       "fetchedAt": "2026-03-06T05:02:12.872105+00:00"
-    },
-    "https://bitcoinknots.org/": {
-      "ok": true,
-      "summary": "Bitcoin Knots Download About Security News Download About Security News Run your own node on your own wallet Download Bitcoin Knots Bitcoin Knots for MacOS Download Latest version: 29.3.knots20260210 Download Download Bitcoin Knots Bitcoin Knots for Windows Download Latest version: 29.3.knots20260210 Download Download Bitcoin Knots Bitcoin Knots for",
-      "keywords": [
-        "download",
-        "knots",
-        "security",
-        "news",
-        "own",
-        "latest",
-        "version",
-        "knots20260210",
-        "run",
-        "node",
-        "wallet",
-        "macos"
-      ],
-      "title": "Bitcoin Knots",
-      "sourceKind": "remote_html",
-      "fetchedAt": "2026-03-06T05:02:12.878083+00:00"
     },
     "https://github.com/Mirobit/bitcoin-node-manager": {
       "ok": true,
@@ -30015,15 +29974,6 @@
       "title": "",
       "sourceKind": "remote",
       "fetchedAt": "2026-03-07T01:23:02.398852+00:00"
-    },
-    "https://bip110.org/": {
-      "ok": false,
-      "error": "fetch_failed",
-      "summary": "",
-      "keywords": [],
-      "title": "",
-      "sourceKind": "remote",
-      "fetchedAt": "2026-03-07T01:23:02.399840+00:00"
     },
     "https://thebitcoinportal.com/nodes/bip110": {
       "ok": false,

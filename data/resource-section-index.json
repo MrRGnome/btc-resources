@@ -157,16 +157,14 @@
     },
     "bitcoin-information/forks.html": {
       "fork monitoring and statistics": "forkmon",
-      "history": "history",
-      "dangerous forking software": "dangerous_forking"
+      "history": "history"
     },
     "bitcoin-information/full-node.html": {
       "running a node": "running",
       "diy guides": "diy",
       "full node dashboards": "dashboards",
       "full node software": "software",
-      "alpha / unmaintained full node software": "alpha",
-      "dangerous forking software": "dangerous_forking"
+      "alpha / unmaintained full node software": "alpha"
     },
     "bitcoin-information/getting-started.html": {
       "first steps": "steps",
