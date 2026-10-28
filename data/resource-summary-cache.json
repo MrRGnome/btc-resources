@@ -15835,26 +15835,6 @@
       "sourceKind": "remote_html",
       "fetchedAt": "2026-03-06T05:02:12.048943+00:00"
     },
-    "https://bitcoin-knots-config-generator.netlify.app/": {
-      "ok": true,
-      "summary": "Create and edit configuration files for bitcoin full nodes. Supports both Core and Knots.",
-      "keywords": [
-        "create",
-        "edit",
-        "configuration",
-        "files",
-        "full",
-        "nodes",
-        "supports",
-        "core",
-        "knots",
-        "config",
-        "editor"
-      ],
-      "title": "Bitcoin Config Editor",
-      "sourceKind": "remote_html",
-      "fetchedAt": "2026-03-06T05:02:12.112477+00:00"
-    },
     "https://bitcoiner.guide/node": {
       "ok": true,
       "summary": "Expert Bitcoin consulting and mentorship. 1-on-1 support for self-custody, hardware wallets, nodes, multisig, privacy and more.",
@@ -15886,27 +15866,6 @@
       "title": "WICJubileeBook2004",
       "sourceKind": "remote_pdf",
       "fetchedAt": "2026-03-06T05:02:12.240931+00:00"
-    },
-    "https://youtu.be/zT4NuAaH3EM?si=WWW44AQn-_YtDRhy": {
-      "ok": true,
-      "summary": "Looking to break away from the defaults? In this tutorial, I’ll show you how to run Bitcoin Knots (or switch over from Bitcoin Core) on desktop, Umbrel, and ...",
-      "keywords": [
-        "run",
-        "knots",
-        "desktop",
-        "umbrel",
-        "looking",
-        "break",
-        "away",
-        "defaults",
-        "tutorial",
-        "show",
-        "switch",
-        "over"
-      ],
-      "title": "How To Run A BITCOIN NODE: Knots on Desktop, Umbrel and Start9 - YouTube",
-      "sourceKind": "remote_html",
-      "fetchedAt": "2026-03-06T05:02:12.440831+00:00"
     },
     "https://github.com/ArmanTheParman/Parmanode": {
       "ok": true,

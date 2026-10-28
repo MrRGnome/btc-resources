@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21T15:28:13.146773+00:00",
-  "resourceCount": 1765,
+  "resourceCount": 1763,
   "resources": [
     {
       "name": "We are Cypherpunk",
@@ -36000,51 +36000,6 @@
       ]
     },
     {
-      "name": "Bitcoin Knots Config Generator",
-      "page": "bitcoin-information/full-node.html",
-      "categoryHeader": "Running a Node",
-      "category": "Running a Node",
-      "url": "https://bitcoin-knots-config-generator.netlify.app/",
-      "tags": [
-        "Bitcoin Knots Config Generator",
-        "Running a Node",
-        "full node",
-        "knots",
-        "config",
-        "generator",
-        "node config generator",
-        "node",
-        "running",
-        "full",
-        "bitcoin-knots-config-generator.netlify.app",
-        "bitcoin",
-        "netlify",
-        "create",
-        "edit",
-        "configuration",
-        "files",
-        "nodes",
-        "supports",
-        "core",
-        "editor"
-      ],
-      "content": "Bitcoin Knots Config Generator",
-      "externalSummary": "Create and edit configuration files for bitcoin full nodes. Supports both Core and Knots.",
-      "externalKeywords": [
-        "create",
-        "edit",
-        "configuration",
-        "files",
-        "full",
-        "nodes",
-        "supports",
-        "core",
-        "knots",
-        "config",
-        "editor"
-      ]
-    },
-    {
       "name": "Bitcoin Config Editor",
       "page": "bitcoin-information/full-node.html",
       "categoryHeader": "Running a Node",
@@ -36135,58 +36090,6 @@
         "here",
         "help",
         "along"
-      ]
-    },
-    {
-      "name": "BTCsessions Knots Guide",
-      "page": "bitcoin-information/full-node.html",
-      "categoryHeader": "Running a Node",
-      "category": "Running a Node",
-      "url": "https://youtu.be/zT4NuAaH3EM?si=WWW44AQn-_YtDRhy",
-      "tags": [
-        "BTCsessions Knots Guide",
-        "Running a Node",
-        "full node",
-        "btcsessions",
-        "knots",
-        "node guides",
-        "node",
-        "guides",
-        "running",
-        "full",
-        "youtu.be",
-        "youtu",
-        "be",
-        "zt4nuaah3em",
-        "youtube",
-        "video",
-        "run",
-        "desktop",
-        "umbrel",
-        "looking",
-        "break",
-        "away",
-        "defaults",
-        "tutorial",
-        "show",
-        "switch",
-        "over"
-      ],
-      "content": "BTCsessions Knots Guide",
-      "externalSummary": "Looking to break away from the defaults? In this tutorial, I’ll show you how to run Bitcoin Knots (or switch over from Bitcoin Core) on desktop, Umbrel, and ...",
-      "externalKeywords": [
-        "run",
-        "knots",
-        "desktop",
-        "umbrel",
-        "looking",
-        "break",
-        "away",
-        "defaults",
-        "tutorial",
-        "show",
-        "switch",
-        "over"
       ]
     },
     {
